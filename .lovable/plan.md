@@ -34,7 +34,7 @@ Un hueco que hay que cerrar con el cliente:
 - **CCTV y videovigilancia**: incluyendo búsqueda inteligente de vídeo.
 - **Obra nueva y renovaciones**.
 - **Nosotros**: 20+ años, equipo con experiencia en aplicación de la ley, cifras, filosofía sin contratos abusivos.
-- **Calidad y certificaciones**: ISO 9001, ISO 14001 e ISO 45001 explicadas en clave de beneficio para el cliente, con sellos, alcance, entidad certificadora y descarga de los certificados; además de acreditaciones de seguridad privada cuando el cliente las aporte. Los sellos ISO también aparecen como prueba de confianza en inicio, páginas de empresas y footer.
+- **Acreditaciones y certificaciones**: ISO 9001 / 14001 / 45001, Empresa Acreditada REA, Registro en Industria (PCI) y Registro en Seguridad Privada, cada uno explicado en clave de beneficio para el cliente, con número, alcance, emisor y descarga del documento. Los sellos también aparecen como prueba de confianza en inicio, páginas de empresas y footer, y el asistente IA puede citarlos.
 - **Contacto**: formulario de valoración gratuita, teléfono 24h, email, mapa, horario.
 - **Legales**: Aviso Legal, Política de Privacidad, Política de Cookies + banner de cookies.
 
