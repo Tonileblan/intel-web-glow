@@ -49,9 +49,11 @@ Asistente de chat flotante, disponible en todas las páginas:
 - Puede derivar a WhatsApp/teléfono 24h en casos urgentes.
 - Deja registro de la conversación y de los contactos generados para que el cliente los vea.
 
-## Diseño
+## Diseño, imágenes y animación
 
-- Se mantiene el logo actual y el rojo corporativo como acento único sobre una base oscura sobria, con tipografía moderna de alto contraste, mucho aire y microanimaciones al hacer scroll. Nada de plantilla WordPress genérica: retícula clara, fotografía a sangre y bloques de confianza.
+- Se mantiene el logo actual y el rojo corporativo como acento único sobre una base oscura sobria, con tipografía moderna de alto contraste, mucho aire y retícula clara. Nada de plantilla WordPress genérica.
+- **Imágenes de stock de alta calidad**: fotografía profesional y coherente en toda la web (instalaciones reales, cámaras y CCTV, centro de control, técnicos trabajando, naves y comercios, hogar protegido), tratada con un mismo grado de color oscuro + acento rojo para que parezca una sola sesión de fotos y no un banco de imágenes. Formatos modernos (WebP/AVIF), tamaños responsivos y carga diferida para no penalizar la velocidad.
+- **Animaciones sencillas pero impactantes** con Motion: hero con entrada escalonada del titular y la imagen, contadores que se animan al entrar en pantalla (+2.500 clientes, +20 años, +5.000 proyectos), revelado suave de secciones al hacer scroll, carrusel continuo de logos de clientes, hover con elevación y línea roja en las tarjetas de servicio, sellos de certificación que entran en secuencia, y una animación de apertura del asistente IA. Todo discreto, rápido y respetando `prefers-reduced-motion`.
 - Mobile first, accesible (contraste AA), carga rápida.
 
 ## SEO
