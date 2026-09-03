@@ -33,6 +33,8 @@ Un hueco que hay que cerrar con el cliente:
 - **Particulares / Hogar**.
 - **CCTV y videovigilancia**: incluyendo búsqueda inteligente de vídeo.
 - **Obra nueva y renovaciones**.
+- **Mantenimiento de sistemas**: contratos de mantenimiento preventivo y correctivo para empresas, comunidades y urbanizaciones (revisiones legales de PCI, alarmas, CCTV y control de acceso, tiempos de respuesta, 24h).
+- **Blog / Centro de conocimiento**: artículos sobre los problemas reales de seguridad y control en empresas e instituciones, y sobre mantenimiento en empresas y urbanizaciones. Listado con filtros por categoría (empresas, instituciones, urbanizaciones, mantenimiento, normativa, videovigilancia), página de artículo con índice, tiempo de lectura, artículos relacionados y CTA de valoración gratuita, y feed RSS. Primer lote de artículos redactado desde cero, por ejemplo: intrusión y robo en polígonos industriales; control de accesos y visitas en instalaciones sensibles; videovigilancia y RGPD/LOPDGDD (qué es legal grabar y cómo señalizarlo); mantenimiento legal obligatorio de sistemas PCI; qué debe incluir un contrato de mantenimiento en una urbanización; vandalismo y control de zonas comunes; alarmas antiguas frente a sistemas conectados a CRA; seguridad en obra y nueva construcción; cómo elegir empresa de seguridad certificada; falsas alarmas y cómo reducirlas.
 - **Nosotros**: 20+ años, equipo con experiencia en aplicación de la ley, cifras, filosofía sin contratos abusivos.
 - **Acreditaciones y certificaciones**: ISO 9001 / 14001 / 45001, Empresa Acreditada REA, Registro en Industria (PCI) y Registro en Seguridad Privada, cada uno explicado en clave de beneficio para el cliente, con número, alcance, emisor y descarga del documento. Los sellos también aparecen como prueba de confianza en inicio, páginas de empresas y footer, y el asistente IA puede citarlos.
 - **Contacto**: formulario de valoración gratuita, teléfono 24h, email, mapa, horario.
@@ -58,23 +60,25 @@ Asistente de chat flotante, disponible en todas las páginas:
 
 ## SEO
 
-- Títulos y descripciones propios por página orientados a "sistemas de seguridad Murcia", "alarmas empresas Molina de Segura", "CCTV videovigilancia Murcia".
-- Un solo H1 por página, HTML semántico, alt en imágenes, datos estructurados de negocio local (LocalBusiness/SecuritySystemInstaller) con dirección y teléfono, canónicas y hreflang ES/EN.
+- Títulos y descripciones propios por página orientados a "sistemas de seguridad Murcia", "alarmas empresas Molina de Segura", "CCTV videovigilancia Murcia", más las búsquedas informativas que atacará el blog ("mantenimiento sistemas contra incendios obligatorio", "cámaras en urbanizaciones y RGPD", etc.).
+- Un solo H1 por página, HTML semántico, alt en imágenes, datos estructurados de negocio local (LocalBusiness/SecuritySystemInstaller) con dirección y teléfono, `Article`/`BlogPosting` en los artículos, canónicas y hreflang ES/EN, sitemap y RSS.
 
 ## Detalles técnicos
 
 - TanStack Start + React con rutas por página e idioma; sistema de diseño en `src/styles.css` con tokens semánticos derivados de la paleta de marca.
 - Se activa Lovable Cloud para: el asistente IA (a través de Lovable AI, sin claves del cliente), almacenamiento de conversaciones y de los leads del formulario de contacto, y envío de aviso por email al recibir un contacto.
-- El asistente se implementa en el servidor (nunca se expone la clave), con streaming de respuesta y manejo visible de errores/límites.
-- Imágenes: reutilizo los assets públicos actuales (logo, fotos de servicios, logos de clientes) descargándolos; donde falte calidad, genero visuales nuevos coherentes con la marca.
+- El asistente se implementa en el servidor (nunca se expone la clave), con streaming de respuesta y manejo visible de errores/límites, y puede citar y enlazar los artículos del blog.
+- Blog con contenido en el propio proyecto (un fichero por artículo, ES/EN), rutas `/blog` y `/blog/{slug}`; si más adelante el cliente quiere editar sin tocar código, se migra a base de datos con panel de administración.
+- Imágenes: reutilizo los assets públicos actuales (logo, certificados, logos de clientes) y añado fotografía de stock de alta calidad para hero, servicios y artículos.
 
 ## Fases
 
-1. Sistema de diseño + Inicio en español, con el logo y colores reales.
-2. Páginas de servicios, Nosotros y Contacto (ES).
-3. Asistente IA con la base de conocimiento de Control 61.
-4. Versión en inglés + SEO técnico e hreflang.
-5. Legales (con los datos que aporte el cliente) y banner de cookies.
+1. Sistema de diseño + Inicio en español, con el logo, colores y fotografía reales.
+2. Páginas de servicios, mantenimiento, Nosotros, acreditaciones y Contacto (ES).
+3. Blog: listado, plantilla de artículo y primer lote de artículos.
+4. Asistente IA con la base de conocimiento de Control 61 (servicios, certificados y artículos).
+5. Versión en inglés + SEO técnico, hreflang, sitemap y RSS.
+6. Legales (con los datos que aporte el cliente) y banner de cookies.
 
 ## Lo que necesito del cliente
 
