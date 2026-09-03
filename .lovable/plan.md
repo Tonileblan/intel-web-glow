@@ -15,7 +15,7 @@ Rediseño completo de control61.es manteniendo el logo y los colores de marca (r
 
 Dos huecos que hay que cerrar contigo o con el cliente:
 
-1. **Certificados y acreditaciones**: en las páginas que he leído no aparece ningún número de inscripción en el Registro de Empresas de Seguridad del Ministerio del Interior, ni certificaciones (ISO, Grado 2/3, CRA asociada). En seguridad privada esto es un argumento de venta fuerte y un requisito legal de identificación. Los pediré/dejaré marcados; sin ellos no puedo inventarlos.
+1. **Certificados**: la página `/certificacion-iso14001-45001` confirma que Control 61 está certificada en **ISO 9001 (calidad), ISO 14001 (medio ambiente) e ISO 45001 (seguridad y salud laboral)**, pero solo las muestra como tres imágenes escaneadas, sin texto ni datos indexables. En la nueva web pasarán a ser un bloque de confianza real (sellos + entidad certificadora + alcance + nº de certificado y vigencia), con los certificados descargables en PDF. Necesito de ti/el cliente la entidad certificadora, los números de certificado y las fechas; las imágenes actuales las reutilizo mientras tanto. No he encontrado el nº de inscripción en el Registro de Empresas de Seguridad del Ministerio del Interior ni grado de las instalaciones/CRA asociada: si existen, son un argumento de venta fuerte y los incorporo.
 2. **Textos legales completos**: la web actual tiene Política de Privacidad y cookies; faltan Aviso Legal con datos fiscales (CIF, registro mercantil) y una política de cookies separada. Necesito el CIF y el nº de registro para dejarlos correctos.
 
 ## Estructura de la nueva web
@@ -25,7 +25,8 @@ Dos huecos que hay que cerrar contigo o con el cliente:
 - **Particulares / Hogar**.
 - **CCTV y videovigilancia**: incluyendo búsqueda inteligente de vídeo.
 - **Obra nueva y renovaciones**.
-- **Nosotros**: 20+ años, equipo con experiencia en aplicación de la ley, cifras, filosofía sin contratos abusivos, certificados y acreditaciones.
+- **Nosotros**: 20+ años, equipo con experiencia en aplicación de la ley, cifras, filosofía sin contratos abusivos.
+- **Calidad y certificaciones**: ISO 9001, ISO 14001 e ISO 45001 explicadas en clave de beneficio para el cliente, con sellos, alcance, entidad certificadora y descarga de los certificados; además de acreditaciones de seguridad privada cuando el cliente las aporte. Los sellos ISO también aparecen como prueba de confianza en inicio, páginas de empresas y footer.
 - **Contacto**: formulario de valoración gratuita, teléfono 24h, email, mapa, horario.
 - **Legales**: Aviso Legal, Política de Privacidad, Política de Cookies + banner de cookies.
 
