@@ -15,8 +15,8 @@ Rediseño completo de control61.es manteniendo el logo y los colores de marca (r
 
 **Acreditaciones y certificados encontrados** (todas las páginas los muestran solo como imágenes escaneadas, sin texto indexable):
 
-- ISO 9001 (calidad), ISO 14001 (medio ambiente) e ISO 45001 (seguridad y salud laboral).
-- Certificado de Empresa Acreditada REA (Registro de Empresas Acreditadas del sector de la construcción).
+- ISO 9001 (calidad), ISO 14001 (medio ambiente) e ISO 45001 (seguridad y salud laboral), certificadas por **RINA** (miembro de la Federación CISQ, red IQNet).
+- Certificado de Empresa Acreditada **REA** (Registro de Empresas Acreditadas, Ministerio de Trabajo), para trabajos en el sector de la construcción.
 - Registro en Industria (instalador de PCI, protección contra incendios).
 - Registro en Seguridad Privada (Ministerio del Interior).
 
