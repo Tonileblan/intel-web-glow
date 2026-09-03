@@ -61,7 +61,7 @@ Asistente de chat flotante, disponible en todas las páginas:
 
 ## SEO
 
-- Títulos y descripciones propios por página orientados a "sistemas de seguridad Murcia", "alarmas empresas Molina de Segura", "CCTV videovigilancia Murcia", más las búsquedas informativas que atacará el blog ("mantenimiento sistemas contra incendios obligatorio", "cámaras en urbanizaciones y RGPD", etc.).
+- Títulos y descripciones propios por página orientados a "sistemas de seguridad Murcia", "alarmas empresas Molina de Segura", "seguridad ayuntamientos e instituciones Murcia", "CCTV videovigilancia Murcia", "mantenimiento sistemas seguridad urbanizaciones", más las búsquedas informativas del blog.
 - Un solo H1 por página, HTML semántico, alt en imágenes, datos estructurados de negocio local (LocalBusiness/SecuritySystemInstaller) con dirección y teléfono, `Article`/`BlogPosting` en los artículos, canónicas y hreflang ES/EN, sitemap y RSS.
 
 ## Detalles técnicos
