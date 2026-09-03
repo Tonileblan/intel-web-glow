@@ -20,7 +20,7 @@ Rediseño completo de control61.es manteniendo el logo y los colores de marca (r
 - Registro en Industria (instalador de PCI, protección contra incendios).
 - Registro en Seguridad Privada (Ministerio del Interior).
 
-Estos cuatro bloques son el mayor activo comercial infrautilizado de la web actual: hoy están escondidos en páginas sueltas con un JPG. En la nueva web pasan a ser un módulo de confianza con sello, alcance, entidad emisora, número y vigencia en texto real (indexable por Google y consultable por el asistente IA), más el escaneo original ampliable y descargable. Extraeré los números y fechas de los escaneos por reconocimiento de texto y te los pasaré para que el cliente los valide antes de publicarlos; lo que no se lea con certeza queda pendiente de confirmación en lugar de inventarse.
+Estos cuatro bloques son el mayor activo comercial infrautilizado de la web actual: hoy están escondidos en páginas sueltas con un JPG. En la nueva web pasan a ser un módulo de confianza con sello vectorizado (RINA/CISQ/IQNet, REA, Industria, Seguridad Privada), alcance, entidad emisora, número y vigencia en texto real (indexable por Google y consultable por el asistente IA), más el escaneo original ampliable y descargable. Extraeré los números y fechas de los escaneos por reconocimiento de texto y te los pasaré para que el cliente los valide antes de publicarlos; lo que no se lea con certeza queda pendiente de confirmación en lugar de inventarse.
 
 Un hueco que hay que cerrar con el cliente:
 
