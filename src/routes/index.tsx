@@ -14,6 +14,7 @@ import {
 
 import { Counter } from "@/components/Counter";
 import { CtaSection } from "@/components/CtaSection";
+import { ClientLogos } from "@/components/ClientLogos";
 import { Reveal } from "@/components/Reveal";
 import selloRea from "@/assets/Registro-de-Empresas-Acreditadas.png";
 import selloRina from "@/assets/Rina-Iso2-1.png";
@@ -220,6 +221,10 @@ function Index() {
           </ul>
         </div>
       </section>
+
+      <ClientLogos text="Más de 2.500 clientes en Murcia y alrededores: industria, logística, alimentación, despachos, administraciones públicas y comunidades." />
+
+
 
       <section className="border-y border-border px-6 py-20" aria-labelledby="porque">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
