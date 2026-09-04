@@ -58,6 +58,16 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            {site.extraNav.map((item) => (
+              <li key={item.to}>
+                <Link
+                  to={item.to}
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
