@@ -130,15 +130,15 @@ function Index() {
           alt="Centro de control de videovigilancia con múltiples monitores encendidos"
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-10 size-full object-cover opacity-40"
+          className="absolute inset-0 -z-10 size-full object-cover"
         />
         <div
-          className="absolute inset-0 -z-10 bg-gradient-to-t from-background via-background/85 to-background/60"
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/92 to-background/45"
           aria-hidden="true"
         />
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <p className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground backdrop-blur">
+            <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground backdrop-blur">
               <ShieldCheck className="size-4 text-primary" aria-hidden="true" />
               {site.claim}
             </p>
@@ -161,7 +161,7 @@ function Index() {
               </Link>
               <a
                 href={site.phoneHref}
-                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-border bg-background/60 px-5 text-sm font-medium backdrop-blur transition-colors hover:bg-accent"
+                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-border bg-card/80 px-5 text-sm font-medium backdrop-blur transition-colors hover:bg-accent"
               >
                 <Phone className="size-4" aria-hidden="true" />
                 {site.phone} · 24 h
