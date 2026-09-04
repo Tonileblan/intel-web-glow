@@ -77,14 +77,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Control 61 — Seguridad en Murcia" },
+      {
+        name: "description",
+        content:
+          "Instalación y mantenimiento de alarmas, CCTV y control de accesos para empresas, instituciones y hogares en la Región de Murcia.",
+      },
+      { name: "author", content: "Control 61" },
+      { property: "og:title", content: "Control 61 — Seguridad en Murcia" },
+      {
+        property: "og:description",
+        content:
+          "Más de 20 años protegiendo empresas, instituciones y hogares en la Región de Murcia.",
+      },
+      { property: "og:site_name", content: "Control 61" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+
     ],
     links: [
       {
