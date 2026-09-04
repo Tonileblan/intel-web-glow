@@ -14,6 +14,7 @@ import {
 
 import { Counter } from "@/components/Counter";
 import { CtaSection } from "@/components/CtaSection";
+import { ClientLogos } from "@/components/ClientLogos";
 import { Reveal } from "@/components/Reveal";
 import selloRea from "@/assets/Registro-de-Empresas-Acreditadas.png";
 import selloRina from "@/assets/Rina-Iso2-1.png";
