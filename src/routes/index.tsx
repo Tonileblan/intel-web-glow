@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion } from "motion/react";
 import {
   ArrowRight,
   Building2,
@@ -138,11 +137,7 @@ function Index() {
           aria-hidden="true"
         />
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          >
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
             <p className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground backdrop-blur">
               <ShieldCheck className="size-4 text-primary" aria-hidden="true" />
               {site.claim}
@@ -172,7 +167,7 @@ function Index() {
                 {site.phone} · 24 h
               </a>
             </div>
-          </motion.div>
+          </div>
 
           <dl className="mt-16 grid gap-8 sm:grid-cols-3">
             {site.stats.map((stat, i) => (

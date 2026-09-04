@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { motion } from "motion/react";
 import type { ReactNode } from "react";
 
 export function PageHero({
@@ -35,11 +34,7 @@ export function PageHero({
         </>
       ) : null}
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        >
+        <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
           {eyebrow ? (
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
               {eyebrow}
@@ -61,7 +56,7 @@ export function PageHero({
               </Link>
             </div>
           )}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
