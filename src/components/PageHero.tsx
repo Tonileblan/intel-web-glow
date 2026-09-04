@@ -25,10 +25,10 @@ export function PageHero({
             alt={imageAlt ?? ""}
             width={1920}
             height={1080}
-            className="absolute inset-0 -z-10 size-full object-cover opacity-45"
+            className="absolute inset-0 -z-10 size-full object-cover"
           />
           <div
-            className="absolute inset-0 -z-10 bg-gradient-to-t from-background via-background/85 to-background/55"
+            className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/90 to-background/40"
             aria-hidden="true"
           />
         </>
