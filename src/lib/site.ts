@@ -18,7 +18,7 @@ export const site = {
   nav: [
     { to: "/empresas", label: "Empresas" },
     { to: "/instituciones", label: "Instituciones" },
-    { to: "/hogar", label: "Hogar y urbanizaciones" },
+    { to: "/hogar", label: "Hogar" },
     { to: "/cctv", label: "CCTV" },
     { to: "/mantenimiento", label: "Mantenimiento" },
     { to: "/acreditaciones", label: "Acreditaciones" },

@@ -35,12 +35,12 @@ export function Header() {
           />
         </Link>
 
-        <nav aria-label="Principal" className="hidden items-center gap-5 lg:flex">
+        <nav aria-label="Principal" className="hidden items-center gap-4 xl:flex">
           {site.nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="whitespace-nowrap text-sm text-muted-foreground transition-colors hover:text-foreground"
               activeProps={{ className: "text-foreground font-medium" }}
             >
               {item.label}
@@ -51,14 +51,14 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={site.phoneHref}
-            className="hidden min-h-10 items-center gap-2 rounded-md border border-border px-3 text-sm font-medium transition-colors hover:bg-accent md:inline-flex"
+            className="hidden min-h-10 items-center gap-2 whitespace-nowrap rounded-md border border-border px-3 text-sm font-medium transition-colors hover:bg-accent md:inline-flex"
           >
             <Phone className="size-4" aria-hidden="true" />
             {site.phone}
           </a>
           <Link
             to="/contacto"
-            className="hidden min-h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex"
+            className="hidden min-h-10 items-center whitespace-nowrap rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex"
           >
             Valoración gratuita
           </Link>
@@ -67,7 +67,7 @@ export function Header() {
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex size-10 items-center justify-center rounded-md border border-border lg:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-md border border-border xl:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -77,7 +77,7 @@ export function Header() {
       {open ? (
         <nav
           aria-label="Menú móvil"
-          className="border-t border-border bg-background px-6 py-4 lg:hidden"
+          className="border-t border-border bg-background px-6 py-4 xl:hidden"
         >
           <ul className="flex flex-col">
             {site.nav.map((item) => (
