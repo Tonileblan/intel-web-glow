@@ -20,6 +20,7 @@ import { Route as HogarRouteImport } from './routes/hogar'
 import { Route as InstitucionesRouteImport } from './routes/instituciones'
 import { Route as MantenimientoRouteImport } from './routes/mantenimiento'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as ObraNuevaRouteImport } from './routes/obra-nueva'
 import { Route as PrivacidadRouteImport } from './routes/privacidad'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 
@@ -78,6 +79,11 @@ const NosotrosRoute = NosotrosRouteImport.update({
   path: '/nosotros',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ObraNuevaRoute = ObraNuevaRouteImport.update({
+  id: '/obra-nueva',
+  path: '/obra-nueva',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacidadRoute = PrivacidadRouteImport.update({
   id: '/privacidad',
   path: '/privacidad',
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/instituciones': typeof InstitucionesRoute
   '/mantenimiento': typeof MantenimientoRoute
   '/nosotros': typeof NosotrosRoute
+  '/obra-nueva': typeof ObraNuevaRoute
   '/privacidad': typeof PrivacidadRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
@@ -116,6 +123,7 @@ export interface FileRoutesByTo {
   '/instituciones': typeof InstitucionesRoute
   '/mantenimiento': typeof MantenimientoRoute
   '/nosotros': typeof NosotrosRoute
+  '/obra-nueva': typeof ObraNuevaRoute
   '/privacidad': typeof PrivacidadRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
@@ -132,6 +140,7 @@ export interface FileRoutesById {
   '/instituciones': typeof InstitucionesRoute
   '/mantenimiento': typeof MantenimientoRoute
   '/nosotros': typeof NosotrosRoute
+  '/obra-nueva': typeof ObraNuevaRoute
   '/privacidad': typeof PrivacidadRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
@@ -149,6 +158,7 @@ export interface FileRouteTypes {
     | '/instituciones'
     | '/mantenimiento'
     | '/nosotros'
+    | '/obra-nueva'
     | '/privacidad'
     | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
@@ -164,6 +174,7 @@ export interface FileRouteTypes {
     | '/instituciones'
     | '/mantenimiento'
     | '/nosotros'
+    | '/obra-nueva'
     | '/privacidad'
     | '/sitemap.xml'
   id:
@@ -179,6 +190,7 @@ export interface FileRouteTypes {
     | '/instituciones'
     | '/mantenimiento'
     | '/nosotros'
+    | '/obra-nueva'
     | '/privacidad'
     | '/sitemap.xml'
   fileRoutesById: FileRoutesById
@@ -195,6 +207,7 @@ export interface RootRouteChildren {
   InstitucionesRoute: typeof InstitucionesRoute
   MantenimientoRoute: typeof MantenimientoRoute
   NosotrosRoute: typeof NosotrosRoute
+  ObraNuevaRoute: typeof ObraNuevaRoute
   PrivacidadRoute: typeof PrivacidadRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -278,6 +291,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NosotrosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/obra-nueva': {
+      id: '/obra-nueva'
+      path: '/obra-nueva'
+      fullPath: '/obra-nueva'
+      preLoaderRoute: typeof ObraNuevaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacidad': {
       id: '/privacidad'
       path: '/privacidad'
@@ -307,6 +327,7 @@ const rootRouteChildren: RootRouteChildren = {
   InstitucionesRoute: InstitucionesRoute,
   MantenimientoRoute: MantenimientoRoute,
   NosotrosRoute: NosotrosRoute,
+  ObraNuevaRoute: ObraNuevaRoute,
   PrivacidadRoute: PrivacidadRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
