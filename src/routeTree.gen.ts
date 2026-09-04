@@ -10,11 +10,83 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AcreditacionesRouteImport } from './routes/acreditaciones'
+import { Route as AvisoLegalRouteImport } from './routes/aviso-legal'
+import { Route as CctvRouteImport } from './routes/cctv'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as EmpresasRouteImport } from './routes/empresas'
+import { Route as HogarRouteImport } from './routes/hogar'
+import { Route as InstitucionesRouteImport } from './routes/instituciones'
+import { Route as MantenimientoRouteImport } from './routes/mantenimiento'
+import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as ObraNuevaRouteImport } from './routes/obra-nueva'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcreditacionesRoute = AcreditacionesRouteImport.update({
+  id: '/acreditaciones',
+  path: '/acreditaciones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AvisoLegalRoute = AvisoLegalRouteImport.update({
+  id: '/aviso-legal',
+  path: '/aviso-legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CctvRoute = CctvRouteImport.update({
+  id: '/cctv',
+  path: '/cctv',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmpresasRoute = EmpresasRouteImport.update({
+  id: '/empresas',
+  path: '/empresas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HogarRoute = HogarRouteImport.update({
+  id: '/hogar',
+  path: '/hogar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InstitucionesRoute = InstitucionesRouteImport.update({
+  id: '/instituciones',
+  path: '/instituciones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MantenimientoRoute = MantenimientoRouteImport.update({
+  id: '/mantenimiento',
+  path: '/mantenimiento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosRoute = NosotrosRouteImport.update({
+  id: '/nosotros',
+  path: '/nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObraNuevaRoute = ObraNuevaRouteImport.update({
+  id: '/obra-nueva',
+  path: '/obra-nueva',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -25,27 +97,118 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acreditaciones': typeof AcreditacionesRoute
+  '/aviso-legal': typeof AvisoLegalRoute
+  '/cctv': typeof CctvRoute
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
+  '/empresas': typeof EmpresasRoute
+  '/hogar': typeof HogarRoute
+  '/instituciones': typeof InstitucionesRoute
+  '/mantenimiento': typeof MantenimientoRoute
+  '/nosotros': typeof NosotrosRoute
+  '/obra-nueva': typeof ObraNuevaRoute
+  '/privacidad': typeof PrivacidadRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acreditaciones': typeof AcreditacionesRoute
+  '/aviso-legal': typeof AvisoLegalRoute
+  '/cctv': typeof CctvRoute
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
+  '/empresas': typeof EmpresasRoute
+  '/hogar': typeof HogarRoute
+  '/instituciones': typeof InstitucionesRoute
+  '/mantenimiento': typeof MantenimientoRoute
+  '/nosotros': typeof NosotrosRoute
+  '/obra-nueva': typeof ObraNuevaRoute
+  '/privacidad': typeof PrivacidadRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acreditaciones': typeof AcreditacionesRoute
+  '/aviso-legal': typeof AvisoLegalRoute
+  '/cctv': typeof CctvRoute
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
+  '/empresas': typeof EmpresasRoute
+  '/hogar': typeof HogarRoute
+  '/instituciones': typeof InstitucionesRoute
+  '/mantenimiento': typeof MantenimientoRoute
+  '/nosotros': typeof NosotrosRoute
+  '/obra-nueva': typeof ObraNuevaRoute
+  '/privacidad': typeof PrivacidadRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/acreditaciones'
+    | '/aviso-legal'
+    | '/cctv'
+    | '/contacto'
+    | '/cookies'
+    | '/empresas'
+    | '/hogar'
+    | '/instituciones'
+    | '/mantenimiento'
+    | '/nosotros'
+    | '/obra-nueva'
+    | '/privacidad'
+    | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml'
-  id: '__root__' | '/' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/acreditaciones'
+    | '/aviso-legal'
+    | '/cctv'
+    | '/contacto'
+    | '/cookies'
+    | '/empresas'
+    | '/hogar'
+    | '/instituciones'
+    | '/mantenimiento'
+    | '/nosotros'
+    | '/obra-nueva'
+    | '/privacidad'
+    | '/sitemap.xml'
+  id:
+    | '__root__'
+    | '/'
+    | '/acreditaciones'
+    | '/aviso-legal'
+    | '/cctv'
+    | '/contacto'
+    | '/cookies'
+    | '/empresas'
+    | '/hogar'
+    | '/instituciones'
+    | '/mantenimiento'
+    | '/nosotros'
+    | '/obra-nueva'
+    | '/privacidad'
+    | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcreditacionesRoute: typeof AcreditacionesRoute
+  AvisoLegalRoute: typeof AvisoLegalRoute
+  CctvRoute: typeof CctvRoute
+  ContactoRoute: typeof ContactoRoute
+  CookiesRoute: typeof CookiesRoute
+  EmpresasRoute: typeof EmpresasRoute
+  HogarRoute: typeof HogarRoute
+  InstitucionesRoute: typeof InstitucionesRoute
+  MantenimientoRoute: typeof MantenimientoRoute
+  NosotrosRoute: typeof NosotrosRoute
+  ObraNuevaRoute: typeof ObraNuevaRoute
+  PrivacidadRoute: typeof PrivacidadRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -56,6 +219,90 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/acreditaciones': {
+      id: '/acreditaciones'
+      path: '/acreditaciones'
+      fullPath: '/acreditaciones'
+      preLoaderRoute: typeof AcreditacionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aviso-legal': {
+      id: '/aviso-legal'
+      path: '/aviso-legal'
+      fullPath: '/aviso-legal'
+      preLoaderRoute: typeof AvisoLegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cctv': {
+      id: '/cctv'
+      path: '/cctv'
+      fullPath: '/cctv'
+      preLoaderRoute: typeof CctvRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/empresas': {
+      id: '/empresas'
+      path: '/empresas'
+      fullPath: '/empresas'
+      preLoaderRoute: typeof EmpresasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hogar': {
+      id: '/hogar'
+      path: '/hogar'
+      fullPath: '/hogar'
+      preLoaderRoute: typeof HogarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/instituciones': {
+      id: '/instituciones'
+      path: '/instituciones'
+      fullPath: '/instituciones'
+      preLoaderRoute: typeof InstitucionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mantenimiento': {
+      id: '/mantenimiento'
+      path: '/mantenimiento'
+      fullPath: '/mantenimiento'
+      preLoaderRoute: typeof MantenimientoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros': {
+      id: '/nosotros'
+      path: '/nosotros'
+      fullPath: '/nosotros'
+      preLoaderRoute: typeof NosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obra-nueva': {
+      id: '/obra-nueva'
+      path: '/obra-nueva'
+      fullPath: '/obra-nueva'
+      preLoaderRoute: typeof ObraNuevaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -70,6 +317,18 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcreditacionesRoute: AcreditacionesRoute,
+  AvisoLegalRoute: AvisoLegalRoute,
+  CctvRoute: CctvRoute,
+  ContactoRoute: ContactoRoute,
+  CookiesRoute: CookiesRoute,
+  EmpresasRoute: EmpresasRoute,
+  HogarRoute: HogarRoute,
+  InstitucionesRoute: InstitucionesRoute,
+  MantenimientoRoute: MantenimientoRoute,
+  NosotrosRoute: NosotrosRoute,
+  ObraNuevaRoute: ObraNuevaRoute,
+  PrivacidadRoute: PrivacidadRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
