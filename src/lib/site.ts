@@ -24,6 +24,7 @@ export const site = {
     { to: "/acreditaciones", label: "Acreditaciones" },
     { to: "/nosotros", label: "Nosotros" },
   ],
+  extraNav: [{ to: "/obra-nueva", label: "Obra nueva y reformas" }],
   legalNav: [
     { to: "/aviso-legal", label: "Aviso legal" },
     { to: "/privacidad", label: "Privacidad" },

@@ -10,12 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AcreditacionesRouteImport } from './routes/acreditaciones'
+import { Route as AvisoLegalRouteImport } from './routes/aviso-legal'
 import { Route as CctvRouteImport } from './routes/cctv'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as EmpresasRouteImport } from './routes/empresas'
 import { Route as HogarRouteImport } from './routes/hogar'
 import { Route as InstitucionesRouteImport } from './routes/instituciones'
 import { Route as MantenimientoRouteImport } from './routes/mantenimiento'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,9 +28,29 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcreditacionesRoute = AcreditacionesRouteImport.update({
+  id: '/acreditaciones',
+  path: '/acreditaciones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AvisoLegalRoute = AvisoLegalRouteImport.update({
+  id: '/aviso-legal',
+  path: '/aviso-legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CctvRoute = CctvRouteImport.update({
   id: '/cctv',
   path: '/cctv',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EmpresasRoute = EmpresasRouteImport.update({
@@ -53,6 +78,11 @@ const NosotrosRoute = NosotrosRouteImport.update({
   path: '/nosotros',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -61,76 +91,111 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acreditaciones': typeof AcreditacionesRoute
+  '/aviso-legal': typeof AvisoLegalRoute
   '/cctv': typeof CctvRoute
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
   '/empresas': typeof EmpresasRoute
   '/hogar': typeof HogarRoute
   '/instituciones': typeof InstitucionesRoute
   '/mantenimiento': typeof MantenimientoRoute
   '/nosotros': typeof NosotrosRoute
+  '/privacidad': typeof PrivacidadRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acreditaciones': typeof AcreditacionesRoute
+  '/aviso-legal': typeof AvisoLegalRoute
   '/cctv': typeof CctvRoute
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
   '/empresas': typeof EmpresasRoute
   '/hogar': typeof HogarRoute
   '/instituciones': typeof InstitucionesRoute
   '/mantenimiento': typeof MantenimientoRoute
   '/nosotros': typeof NosotrosRoute
+  '/privacidad': typeof PrivacidadRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acreditaciones': typeof AcreditacionesRoute
+  '/aviso-legal': typeof AvisoLegalRoute
   '/cctv': typeof CctvRoute
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
   '/empresas': typeof EmpresasRoute
   '/hogar': typeof HogarRoute
   '/instituciones': typeof InstitucionesRoute
   '/mantenimiento': typeof MantenimientoRoute
   '/nosotros': typeof NosotrosRoute
+  '/privacidad': typeof PrivacidadRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/acreditaciones'
+    | '/aviso-legal'
     | '/cctv'
+    | '/contacto'
+    | '/cookies'
     | '/empresas'
     | '/hogar'
     | '/instituciones'
     | '/mantenimiento'
     | '/nosotros'
+    | '/privacidad'
     | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/acreditaciones'
+    | '/aviso-legal'
     | '/cctv'
+    | '/contacto'
+    | '/cookies'
     | '/empresas'
     | '/hogar'
     | '/instituciones'
     | '/mantenimiento'
     | '/nosotros'
+    | '/privacidad'
     | '/sitemap.xml'
   id:
     | '__root__'
     | '/'
+    | '/acreditaciones'
+    | '/aviso-legal'
     | '/cctv'
+    | '/contacto'
+    | '/cookies'
     | '/empresas'
     | '/hogar'
     | '/instituciones'
     | '/mantenimiento'
     | '/nosotros'
+    | '/privacidad'
     | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcreditacionesRoute: typeof AcreditacionesRoute
+  AvisoLegalRoute: typeof AvisoLegalRoute
   CctvRoute: typeof CctvRoute
+  ContactoRoute: typeof ContactoRoute
+  CookiesRoute: typeof CookiesRoute
   EmpresasRoute: typeof EmpresasRoute
   HogarRoute: typeof HogarRoute
   InstitucionesRoute: typeof InstitucionesRoute
   MantenimientoRoute: typeof MantenimientoRoute
   NosotrosRoute: typeof NosotrosRoute
+  PrivacidadRoute: typeof PrivacidadRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -143,11 +208,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/acreditaciones': {
+      id: '/acreditaciones'
+      path: '/acreditaciones'
+      fullPath: '/acreditaciones'
+      preLoaderRoute: typeof AcreditacionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aviso-legal': {
+      id: '/aviso-legal'
+      path: '/aviso-legal'
+      fullPath: '/aviso-legal'
+      preLoaderRoute: typeof AvisoLegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cctv': {
       id: '/cctv'
       path: '/cctv'
       fullPath: '/cctv'
       preLoaderRoute: typeof CctvRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/empresas': {
@@ -185,6 +278,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NosotrosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -197,12 +297,17 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcreditacionesRoute: AcreditacionesRoute,
+  AvisoLegalRoute: AvisoLegalRoute,
   CctvRoute: CctvRoute,
+  ContactoRoute: ContactoRoute,
+  CookiesRoute: CookiesRoute,
   EmpresasRoute: EmpresasRoute,
   HogarRoute: HogarRoute,
   InstitucionesRoute: InstitucionesRoute,
   MantenimientoRoute: MantenimientoRoute,
   NosotrosRoute: NosotrosRoute,
+  PrivacidadRoute: PrivacidadRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
