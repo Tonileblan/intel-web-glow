@@ -10,11 +10,47 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CctvRouteImport } from './routes/cctv'
+import { Route as EmpresasRouteImport } from './routes/empresas'
+import { Route as HogarRouteImport } from './routes/hogar'
+import { Route as InstitucionesRouteImport } from './routes/instituciones'
+import { Route as MantenimientoRouteImport } from './routes/mantenimiento'
+import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CctvRoute = CctvRouteImport.update({
+  id: '/cctv',
+  path: '/cctv',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmpresasRoute = EmpresasRouteImport.update({
+  id: '/empresas',
+  path: '/empresas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HogarRoute = HogarRouteImport.update({
+  id: '/hogar',
+  path: '/hogar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InstitucionesRoute = InstitucionesRouteImport.update({
+  id: '/instituciones',
+  path: '/instituciones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MantenimientoRoute = MantenimientoRouteImport.update({
+  id: '/mantenimiento',
+  path: '/mantenimiento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosRoute = NosotrosRouteImport.update({
+  id: '/nosotros',
+  path: '/nosotros',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -25,27 +61,76 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cctv': typeof CctvRoute
+  '/empresas': typeof EmpresasRoute
+  '/hogar': typeof HogarRoute
+  '/instituciones': typeof InstitucionesRoute
+  '/mantenimiento': typeof MantenimientoRoute
+  '/nosotros': typeof NosotrosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cctv': typeof CctvRoute
+  '/empresas': typeof EmpresasRoute
+  '/hogar': typeof HogarRoute
+  '/instituciones': typeof InstitucionesRoute
+  '/mantenimiento': typeof MantenimientoRoute
+  '/nosotros': typeof NosotrosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cctv': typeof CctvRoute
+  '/empresas': typeof EmpresasRoute
+  '/hogar': typeof HogarRoute
+  '/instituciones': typeof InstitucionesRoute
+  '/mantenimiento': typeof MantenimientoRoute
+  '/nosotros': typeof NosotrosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/cctv'
+    | '/empresas'
+    | '/hogar'
+    | '/instituciones'
+    | '/mantenimiento'
+    | '/nosotros'
+    | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml'
-  id: '__root__' | '/' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/cctv'
+    | '/empresas'
+    | '/hogar'
+    | '/instituciones'
+    | '/mantenimiento'
+    | '/nosotros'
+    | '/sitemap.xml'
+  id:
+    | '__root__'
+    | '/'
+    | '/cctv'
+    | '/empresas'
+    | '/hogar'
+    | '/instituciones'
+    | '/mantenimiento'
+    | '/nosotros'
+    | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CctvRoute: typeof CctvRoute
+  EmpresasRoute: typeof EmpresasRoute
+  HogarRoute: typeof HogarRoute
+  InstitucionesRoute: typeof InstitucionesRoute
+  MantenimientoRoute: typeof MantenimientoRoute
+  NosotrosRoute: typeof NosotrosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -56,6 +141,48 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cctv': {
+      id: '/cctv'
+      path: '/cctv'
+      fullPath: '/cctv'
+      preLoaderRoute: typeof CctvRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/empresas': {
+      id: '/empresas'
+      path: '/empresas'
+      fullPath: '/empresas'
+      preLoaderRoute: typeof EmpresasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hogar': {
+      id: '/hogar'
+      path: '/hogar'
+      fullPath: '/hogar'
+      preLoaderRoute: typeof HogarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/instituciones': {
+      id: '/instituciones'
+      path: '/instituciones'
+      fullPath: '/instituciones'
+      preLoaderRoute: typeof InstitucionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mantenimiento': {
+      id: '/mantenimiento'
+      path: '/mantenimiento'
+      fullPath: '/mantenimiento'
+      preLoaderRoute: typeof MantenimientoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros': {
+      id: '/nosotros'
+      path: '/nosotros'
+      fullPath: '/nosotros'
+      preLoaderRoute: typeof NosotrosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -70,6 +197,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CctvRoute: CctvRoute,
+  EmpresasRoute: EmpresasRoute,
+  HogarRoute: HogarRoute,
+  InstitucionesRoute: InstitucionesRoute,
+  MantenimientoRoute: MantenimientoRoute,
+  NosotrosRoute: NosotrosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
