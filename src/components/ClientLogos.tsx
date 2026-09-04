@@ -18,11 +18,11 @@ const logos = Object.entries(modules)
 function Row({ ariaHidden }: { ariaHidden?: boolean }) {
   return (
     <ul
-      className="flex shrink-0 items-center gap-12 pr-12"
+      className="flex shrink-0 items-center gap-6 pr-6"
       aria-hidden={ariaHidden ? "true" : undefined}
     >
       {logos.map((logo) => (
-        <li key={logo.src} className="flex w-32 shrink-0 items-center justify-center">
+        <li key={logo.src} className="flex h-24 w-40 shrink-0 items-center justify-center rounded-lg bg-card px-4 shadow-sm">
           <img
             src={logo.src}
             alt={ariaHidden ? "" : `Logotipo de cliente de Control 61`}
@@ -30,7 +30,7 @@ function Row({ ariaHidden }: { ariaHidden?: boolean }) {
             decoding="async"
             width={300}
             height={188}
-            className="h-14 w-auto max-w-full object-contain opacity-80 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+            className="h-16 w-auto max-w-full object-contain transition duration-300 hover:scale-105"
           />
         </li>
       ))}
