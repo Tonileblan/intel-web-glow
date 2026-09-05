@@ -20,7 +20,7 @@ export function Footer() {
             className="h-9 w-auto"
           />
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-            {site.legalName}. Más de 20 años protegiendo empresas, instituciones y hogares
+            {site.brand}. Más de 20 años protegiendo empresas, instituciones y hogares
             en la Región de Murcia.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
