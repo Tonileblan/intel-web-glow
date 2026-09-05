@@ -1,28 +1,41 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
+  ArrowUpRight,
   Building2,
   Camera,
+  CheckCircle2,
+  Clock,
+  Fingerprint,
   Flame,
   HardHat,
   Home,
   Landmark,
+  Lock,
   Phone,
+  Radio,
+  ShieldAlert,
   ShieldCheck,
+  Sparkles,
   Wrench,
+  Zap,
 } from "lucide-react";
 
 import { Counter } from "@/components/Counter";
 import { CtaSection } from "@/components/CtaSection";
 import { ClientLogos } from "@/components/ClientLogos";
 import { Reveal } from "@/components/Reveal";
+import { SecurityConsoleHUD } from "@/components/SecurityConsoleHUD";
+import { BentoGridServices } from "@/components/BentoGridServices";
+import { DefenseArchitecture } from "@/components/DefenseArchitecture";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import selloRea from "@/assets/Registro-de-Empresas-Acreditadas.png";
 import selloRina from "@/assets/Rina-Iso2-1.png";
 import { SITE_URL, site } from "@/lib/site";
 
-const title = "Control 61 — Sistemas de seguridad en Murcia";
+const title = "Control 61 — Sistemas de Seguridad, CCTV con IA y Alarmas en Murcia";
 const description =
-  "Instaladores de alarmas, CCTV y control de accesos en Murcia. Más de 20 años protegiendo empresas, instituciones y hogares. Valoración gratuita y atención 24 h.";
+  "Empresa homologada en seguridad integral en Murcia: instalación de alarmas Grado 2 y 3, CCTV con IA, control de accesos y monitorización 24 h. Valoración técnica gratuita.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -64,220 +77,202 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const services = [
-  {
-    icon: Building2,
-    to: "/empresas",
-    title: "Empresas",
-    text: "Naves, comercios y oficinas: intrusión, incendio, accesos y CCTV en una sola instalación.",
-  },
-  {
-    icon: Landmark,
-    to: "/instituciones",
-    title: "Instituciones",
-    text: "Ayuntamientos, edificios públicos, instalaciones municipales y eventos.",
-  },
-  {
-    icon: Home,
-    to: "/hogar",
-    title: "Hogar y urbanizaciones",
-    text: "Alarmas conectadas y videovigilancia de zonas comunes, sin contratos abusivos.",
-  },
-  {
-    icon: Camera,
-    to: "/cctv",
-    title: "CCTV",
-    text: "Cámaras de alta resolución con búsqueda inteligente de vídeo y cumplimiento del RGPD.",
-  },
-  {
-    icon: Wrench,
-    to: "/mantenimiento",
-    title: "Mantenimiento",
-    text: "Contratos preventivos y correctivos con revisiones legales al día y averías 24 h.",
-  },
-  {
-    icon: HardHat,
-    to: "/obra-nueva",
-    title: "Obra nueva",
-    text: "Previsión en proyecto, canalizaciones en obra y legalización de la instalación.",
-  },
-] as const;
-
 const reasons = [
   {
-    title: "Sin trucos ni contratos a largo plazo",
-    text: "Presupuestos claros y permanencias razonables. Si algo no te hace falta, te lo decimos.",
+    title: "Sin cuotas trampa ni permanencias abusivas",
+    text: "Presupuestos cerrados y transparentes. Eres dueño de tus equipos sin cláusulas de rescisión ocultas.",
+    icon: ShieldCheck,
   },
   {
-    title: "Soluciones personalizadas",
-    text: "Cada proyecto arranca con una visita y un análisis de riesgo real, no con un paquete cerrado.",
+    title: "Auditoría previa y estudio sobre el terreno",
+    text: "Analizamos los accesos y riesgos reales de tu instalación antes de redactar cualquier propuesta técnica.",
+    icon: Sparkles,
   },
   {
-    title: "Instalación profesional",
-    text: "Equipo propio y certificado, obra limpia y formación al entregar el sistema.",
+    title: "Técnicos certificados e ingenieros en plantilla",
+    text: "Equipo propio homologado con formación continua. Cero subcontratación de calidad cuestionable.",
+    icon: CheckCircle2,
   },
   {
-    title: "Atención 24 h ante averías",
-    text: "Un teléfono que responde cuando el sistema falla, también fuera del horario de oficina.",
+    title: "Servicio técnico y averías urgentes 24 horas",
+    text: "Un teléfono atendido por personal técnico de guardia que responde y actúa cuando el sistema falla.",
+    icon: Zap,
   },
 ] as const;
 
 function Index() {
   return (
     <>
-      <section className="relative isolate overflow-hidden border-b border-border">
-        <img
-          src="/hero-control-room.jpg"
-          alt="Centro de control de videovigilancia con múltiples monitores encendidos"
-          width={1920}
-          height={1080}
-          className="absolute inset-0 -z-10 size-full object-cover"
-        />
-        <div
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/92 to-background/45"
-          aria-hidden="true"
-        />
-        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground backdrop-blur">
-              <ShieldCheck className="size-4 text-primary" aria-hidden="true" />
-              {site.claim}
-            </p>
-            <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              Sistemas de seguridad para empresas, instituciones y hogares en{" "}
-              <span className="text-primary">Murcia</span>
+      {/* Hero Section */}
+      <section className="relative isolate overflow-hidden bg-tech-grid pb-20 pt-12 md:pb-28 md:pt-16">
+        {/* Soft Brand Glow in background */}
+        <div className="pointer-events-none absolute -top-32 left-1/2 -z-10 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-red-100/40 blur-3xl" />
+
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="flex flex-col items-center text-center">
+            {/* Live System Status Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 font-mono text-xs font-semibold text-slate-700 shadow-2xs">
+              <span className="relative flex size-2">
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex size-2 rounded-full bg-emerald-500"></span>
+              </span>
+              <span>SISTEMAS ACTIVOS</span>
+              <span className="text-slate-300">|</span>
+              <span className="text-slate-500">MONITORIZACIÓN 24/7 REAL</span>
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="mt-6 max-w-4xl text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl md:leading-[1.12]">
+              Sistemas de seguridad avanzada, <span className="text-primary">CCTV con IA</span> y protección integral
             </h1>
-            <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-              Diseñamos, instalamos y mantenemos alarmas, videovigilancia y control de
-              accesos con más de 20 años de experiencia. Soluciones honestas y
-              personalizadas, sin trucos ni contratos a largo plazo.
+
+            {/* Subtitle */}
+            <p className="mt-6 max-w-2xl text-base text-slate-600 sm:text-lg">
+              Ingeniería e instalación de alarmas de Grado 2 y 3, videovigilancia de alta precisión y control de accesos para empresas, instituciones y hogares en Murcia y Levante.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+
+            {/* Primary Action Buttons */}
+            <div className="mt-8 flex flex-wrap justify-center gap-3.5">
               <Link
                 to="/contacto"
-                className="inline-flex min-h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-primary px-6 text-sm font-semibold text-white shadow-xs transition-all hover:bg-red-700 hover:shadow-md"
               >
-                Solicitar valoración gratuita
-                <ArrowRight className="size-4" aria-hidden="true" />
+                <span>Solicitar valoración gratuita</span>
+                <ArrowUpRight className="size-4" />
               </Link>
               <a
                 href={site.phoneHref}
-                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-border bg-card/80 px-5 text-sm font-medium backdrop-blur transition-colors hover:bg-accent"
+                className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-slate-300 bg-white px-6 text-sm font-semibold text-slate-800 shadow-2xs transition-colors hover:bg-slate-50"
               >
-                <Phone className="size-4" aria-hidden="true" />
-                {site.phone} · 24 h
+                <Phone className="size-4 text-primary" />
+                <span>{site.phone} · Averías 24h</span>
               </a>
             </div>
+
+            {/* Trust Metrics & Counters */}
+            <dl className="mt-14 grid w-full max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+              <div className="rounded-xl border border-slate-200/80 bg-white/90 p-4 text-center shadow-2xs backdrop-blur-xs">
+                <dt className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                  <Counter value={2500} prefix="+" />
+                </dt>
+                <dd className="mt-1 text-xs font-medium text-slate-500">Clientes protegidos</dd>
+              </div>
+
+              <div className="rounded-xl border border-slate-200/80 bg-white/90 p-4 text-center shadow-2xs backdrop-blur-xs">
+                <dt className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                  <Counter value={99} prefix="" />.9%
+                </dt>
+                <dd className="mt-1 text-xs font-medium text-slate-500">Disponibilidad de red</dd>
+              </div>
+
+              <div className="rounded-xl border border-slate-200/80 bg-white/90 p-4 text-center shadow-2xs backdrop-blur-xs">
+                <dt className="text-2xl font-bold tracking-tight text-primary sm:text-3xl font-mono">
+                  &lt; 15s
+                </dt>
+                <dd className="mt-1 text-xs font-medium text-slate-500">Respuesta SOC / CRA</dd>
+              </div>
+
+              <div className="rounded-xl border border-slate-200/80 bg-white/90 p-4 text-center shadow-2xs backdrop-blur-xs">
+                <dt className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                  <Counter value={20} prefix="+" />
+                </dt>
+                <dd className="mt-1 text-xs font-medium text-slate-500">Años de experiencia</dd>
+              </div>
+            </dl>
           </div>
 
-          <dl className="mt-16 grid gap-8 sm:grid-cols-3">
-            {site.stats.map((stat, i) => (
-              <Reveal key={stat.label} delay={i * 0.08}>
-                <div>
-                  <dt className="text-4xl font-semibold text-primary">
-                    <Counter value={stat.value} prefix={stat.prefix} />
-                  </dt>
-                  <dd className="mt-1 text-sm text-muted-foreground">{stat.label}</dd>
-                </div>
-              </Reveal>
-            ))}
-          </dl>
+          {/* Interactive Security Console HUD */}
+          <div className="mt-12">
+            <Reveal delay={0.15}>
+              <SecurityConsoleHUD />
+            </Reveal>
+          </div>
         </div>
       </section>
 
-      <section className="px-6 py-20" aria-labelledby="servicios">
-        <div className="mx-auto max-w-6xl">
-          <Reveal>
-            <h2 id="servicios" className="text-3xl font-semibold tracking-tight">
-              Qué hacemos
-            </h2>
-            <p className="mt-3 max-w-2xl text-muted-foreground">
-              Un único proveedor para proyectar, instalar y mantener toda la seguridad de
-              tus instalaciones.
-            </p>
-          </Reveal>
-          <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, i) => (
-              <Reveal key={service.title} delay={i * 0.06}>
-                <li className="h-full">
-                  <Link
-                    to={service.to}
-                    className="group flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary"
-                  >
-                    <service.icon className="size-6 text-primary" aria-hidden="true" />
-                    <h3 className="mt-4 text-lg font-medium">{service.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{service.text}</p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
-                      Ver más
-                      <ArrowRight
-                        className="size-4 transition-transform group-hover:translate-x-1"
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </Link>
-                </li>
-              </Reveal>
-            ))}
-          </ul>
-        </div>
-      </section>
+      {/* Client Logos Carousel */}
+      <ClientLogos text="Más de 2.500 empresas, naves industriales, comunidades de vecinos y dependencias públicas protegidas en la Región de Murcia." />
 
-      <ClientLogos text="Más de 2.500 clientes en Murcia y alrededores: industria, logística, alimentación, despachos, administraciones públicas y comunidades." />
+      {/* Bento Grid Services Section */}
+      <BentoGridServices />
 
+      {/* 4-Step Defense Workflow Architecture */}
+      <DefenseArchitecture />
 
+      {/* Why Control 61 Section */}
+      <section className="border-b border-slate-200/80 bg-white px-4 py-20 sm:px-6 md:py-28" aria-labelledby="porque">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-5">
+            <Reveal>
+              <p className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 font-mono text-xs font-semibold text-slate-700">
+                <ShieldCheck className="size-3.5 text-primary" />
+                VALOR DIFERENCIAL
+              </p>
+              <h2 id="porque" className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Por qué las empresas eligen {site.brand}
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-slate-600">
+                Nacimos con amplia experiencia técnica y operativa en el sector de la seguridad privada. Nuestro trabajo es implementar sistemas fiables que funcionen sin fallos para que dejes de preocuparte por la seguridad de tus instalaciones.
+              </p>
 
-      <section className="border-y border-border px-6 py-20" aria-labelledby="porque">
-        <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
-          <Reveal>
-            <h2 id="porque" className="text-3xl font-semibold tracking-tight">
-              Por qué {site.brand}
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Nacimos con experiencia previa en seguridad y aplicación de la ley, y hemos
-              protegido desde pequeños comercios hasta instalaciones municipales. Nuestro
-              trabajo es que dejes de pensar en la seguridad.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <img
-                src={selloRina}
-                alt="Certificación ISO 9001, ISO 14001 e ISO 45001 emitida por RINA"
-                width={1200}
-                height={628}
-                loading="lazy"
-                className="h-16 w-auto rounded bg-white/95 p-1.5"
-              />
-              <img
-                src={selloRea}
-                alt="Registro de Empresas Acreditadas (REA)"
-                width={1080}
-                height={680}
-                loading="lazy"
-                className="h-16 w-auto rounded bg-white/95 p-1.5"
-              />
-              <Link
-                to="/acreditaciones"
-                className="text-sm font-medium text-primary hover:underline"
-              >
-                Ver todas las acreditaciones
-              </Link>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <img
+                  src={selloRina}
+                  alt="Certificación ISO 9001, ISO 14001 e ISO 45001 emitida por RINA"
+                  width={1200}
+                  height={628}
+                  loading="lazy"
+                  className="h-14 w-auto rounded-lg border border-slate-200 bg-white p-1.5 shadow-2xs"
+                />
+                <img
+                  src={selloRea}
+                  alt="Registro de Empresas Acreditadas (REA)"
+                  width={1080}
+                  height={680}
+                  loading="lazy"
+                  className="h-14 w-auto rounded-lg border border-slate-200 bg-white p-1.5 shadow-2xs"
+                />
+                <Link
+                  to="/acreditaciones"
+                  className="text-xs font-semibold text-primary hover:underline"
+                >
+                  Ver todas las acreditaciones →
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="lg:col-span-7">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {reasons.map((reason, i) => {
+                const Icon = reason.icon;
+                return (
+                  <Reveal key={reason.title} delay={i * 0.08}>
+                    <div className="flex h-full flex-col justify-between rounded-xl border border-slate-200 bg-slate-50/70 p-5 transition-all hover:border-slate-300 hover:bg-white hover:shadow-xs">
+                      <div>
+                        <div className="inline-flex size-10 items-center justify-center rounded-lg bg-white shadow-2xs ring-1 ring-slate-200">
+                          <Icon className="size-5 text-primary" />
+                        </div>
+                        <h3 className="mt-4 text-base font-bold text-slate-900">
+                          {reason.title}
+                        </h3>
+                        <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                          {reason.text}
+                        </p>
+                      </div>
+                    </div>
+                  </Reveal>
+                );
+              })}
             </div>
-          </Reveal>
-          <ul className="grid gap-4">
-            {reasons.map((reason, i) => (
-              <Reveal key={reason.title} delay={i * 0.06}>
-                <li className="rounded-xl border border-border bg-card p-5">
-                  <h3 className="flex items-start gap-2 font-medium">
-                    <Flame className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-                    {reason.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{reason.text}</p>
-                </li>
-              </Reveal>
-            ))}
-          </ul>
+          </div>
         </div>
       </section>
 
+      {/* Testimonials & Corporate Social Proof */}
+      <TestimonialsSection />
+
+      {/* Final 1-Step Fast Conversion CTA */}
       <CtaSection />
     </>
   );
