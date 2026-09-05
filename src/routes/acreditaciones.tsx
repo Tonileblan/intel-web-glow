@@ -83,8 +83,8 @@ function AcreditacionesPage() {
             ))}
           </ul>
           <p className="mt-10 text-sm text-muted-foreground">
-            Números de certificado, alcance exacto y fechas de vigencia se facilitan a
-            petición, junto con el documento original emitido por cada organismo.
+            Números de certificado, alcance exacto y fechas de vigencia se facilitan a petición,
+            junto con el documento original emitido por cada organismo.
           </p>
         </div>
       </section>

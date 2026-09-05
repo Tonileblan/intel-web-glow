@@ -52,7 +52,8 @@ export function TestimonialsSection() {
               Más de 20 años protegiendo lo que más importa
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-base text-slate-600">
-              La satisfacción de más de 2.500 empresas, comunidades y particulares en la Región de Murcia es nuestro mejor aval.
+              La satisfacción de más de 2.500 empresas, comunidades y particulares en la Región de
+              Murcia es nuestro mejor aval.
             </p>
           </div>
         </Reveal>
@@ -76,9 +77,7 @@ export function TestimonialsSection() {
 
                   <Quote className="mt-4 size-6 text-red-200" />
 
-                  <p className="mt-2 text-sm leading-relaxed text-slate-700">
-                    "{item.quote}"
-                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-700">"{item.quote}"</p>
                 </div>
 
                 <div className="mt-6 border-t border-slate-100 pt-4">
@@ -104,7 +103,8 @@ export function TestimonialsSection() {
                   Empresa Homologada y Certificada por Organismos Oficiales
                 </h3>
                 <p className="mt-2 text-sm text-slate-600">
-                  Contamos con las certificaciones RINA ISO 9001, ISO 14001, ISO 45001, acreditación REA e inscripción oficial en el Registro de Seguridad Privada.
+                  Contamos con las certificaciones RINA ISO 9001, ISO 14001, ISO 45001, acreditación
+                  REA e inscripción oficial en el Registro de Seguridad Privada.
                 </p>
               </div>
 

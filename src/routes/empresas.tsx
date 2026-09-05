@@ -74,8 +74,14 @@ function EmpresasPage() {
           <ol className="mt-10 grid gap-6 md:grid-cols-4">
             {[
               ["Visita y análisis", "Recorremos la instalación y detectamos puntos débiles."],
-              ["Propuesta clara", "Un presupuesto sin partidas sorpresa y sin equipos innecesarios."],
-              ["Instalación profesional", "Equipo propio, obra limpia y puesta en marcha con formación."],
+              [
+                "Propuesta clara",
+                "Un presupuesto sin partidas sorpresa y sin equipos innecesarios.",
+              ],
+              [
+                "Instalación profesional",
+                "Equipo propio, obra limpia y puesta en marcha con formación.",
+              ],
               ["Mantenimiento", "Revisiones periódicas y asistencia ante averías durante 24 h."],
             ].map(([title, text], i) => (
               <li key={title} className="rounded-xl border border-border bg-card p-6">

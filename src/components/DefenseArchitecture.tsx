@@ -78,7 +78,10 @@ export function DefenseArchitecture() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="border-y border-slate-200/80 bg-slate-50/70 px-4 py-20 sm:px-6 md:py-28" aria-labelledby="defense-flow">
+    <section
+      className="border-y border-slate-200/80 bg-slate-50/70 px-4 py-20 sm:px-6 md:py-28"
+      aria-labelledby="defense-flow"
+    >
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <div className="text-center">
@@ -93,7 +96,8 @@ export function DefenseArchitecture() {
               Cómo funciona el escudo defensivo de Control 61
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-base text-slate-600">
-              Un proceso milimétricamente estructurado que combina hardware homologado, inteligencia artificial y respuesta humana experta en segundos.
+              Un proceso milimétricamente estructurado que combina hardware homologado, inteligencia
+              artificial y respuesta humana experta en segundos.
             </p>
           </div>
         </Reveal>
@@ -121,15 +125,9 @@ export function DefenseArchitecture() {
                   >
                     FASE {layer.step}
                   </span>
-                  <Icon
-                    className={`size-4 ${
-                      isActive ? "text-primary" : "text-slate-400"
-                    }`}
-                  />
+                  <Icon className={`size-4 ${isActive ? "text-primary" : "text-slate-400"}`} />
                 </div>
-                <p className="mt-2 text-xs font-semibold text-slate-900 sm:text-sm">
-                  {layer.name}
-                </p>
+                <p className="mt-2 text-xs font-semibold text-slate-900 sm:text-sm">{layer.name}</p>
                 <span className="mt-1 flex items-center gap-1 font-mono text-[11px] text-slate-500">
                   <Clock className="size-3" />
                   {layer.latency}
@@ -186,7 +184,9 @@ export function DefenseArchitecture() {
                   </div>
                   <div className="flex justify-between border-b border-slate-800/60 pb-2">
                     <span className="text-slate-400">Tiempo de Acción:</span>
-                    <span className="font-semibold text-emerald-400">{layers[activeStep].latency}</span>
+                    <span className="font-semibold text-emerald-400">
+                      {layers[activeStep].latency}
+                    </span>
                   </div>
                   <div className="flex justify-between border-b border-slate-800/60 pb-2">
                     <span className="text-slate-400">Canal de Transmisión:</span>

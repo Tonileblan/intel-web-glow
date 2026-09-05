@@ -18,7 +18,9 @@ export function Footer() {
             </div>
             <div>
               <p className="font-semibold text-white">Central de Asistencia y Averías 24/7</p>
-              <p className="text-xs text-slate-400">Atención ininterrumpida para todos nuestros clientes de Murcia y Levante</p>
+              <p className="text-xs text-slate-400">
+                Atención ininterrumpida para todos nuestros clientes de Murcia y Levante
+              </p>
             </div>
           </div>
           <a
@@ -43,7 +45,8 @@ export function Footer() {
             className="h-9 w-auto brightness-0 invert"
           />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
-            {site.legalName}. Más de dos décadas desarrollando ingeniería de seguridad avanzada, CCTV con IA, control de accesos y alarmas conectadas a CRA en la Región de Murcia.
+            {site.legalName}. Más de dos décadas desarrollando ingeniería de seguridad avanzada,
+            CCTV con IA, control de accesos y alarmas conectadas a CRA en la Región de Murcia.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -66,7 +69,8 @@ export function Footer() {
           </div>
 
           <p className="mt-4 text-xs font-mono text-slate-500">
-            Inscrita en el Registro de Seguridad Privada · Acreditada REA · Inscrita en Industria para PCI
+            Inscrita en el Registro de Seguridad Privada · Acreditada REA · Inscrita en Industria
+            para PCI
           </p>
         </div>
 
@@ -78,20 +82,14 @@ export function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm">
             {site.nav.map((item) => (
               <li key={item.to}>
-                <Link
-                  to={item.to}
-                  className="text-slate-400 transition-colors hover:text-white"
-                >
+                <Link to={item.to} className="text-slate-400 transition-colors hover:text-white">
                   {item.label}
                 </Link>
               </li>
             ))}
             {site.extraNav.map((item) => (
               <li key={item.to}>
-                <Link
-                  to={item.to}
-                  className="text-slate-400 transition-colors hover:text-white"
-                >
+                <Link to={item.to} className="text-slate-400 transition-colors hover:text-white">
                   {item.label}
                 </Link>
               </li>
@@ -111,7 +109,9 @@ export function Footer() {
                 <a href={site.phoneHref} className="font-medium text-slate-200 hover:text-white">
                   {site.phone}
                 </a>
-                <span className="block text-xs text-slate-500">Atención comercial y técnica 24h</span>
+                <span className="block text-xs text-slate-500">
+                  Atención comercial y técnica 24h
+                </span>
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -125,15 +125,11 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 size-4 text-primary shrink-0" />
-              <span className="text-xs leading-relaxed text-slate-400">
-                {site.address}
-              </span>
+              <span className="text-xs leading-relaxed text-slate-400">{site.address}</span>
             </li>
             <li className="flex items-start gap-3">
               <Clock className="mt-0.5 size-4 text-primary shrink-0" />
-              <span className="text-xs text-slate-400">
-                {site.schedule}
-              </span>
+              <span className="text-xs text-slate-400">{site.schedule}</span>
             </li>
           </ul>
         </div>

@@ -32,7 +32,8 @@ export function BentoGridServices() {
                 Ingeniería de protección sin puntos ciegos
               </h2>
               <p className="mt-3 max-w-2xl text-base text-slate-600">
-                Diseñamos, instalamos y mantenemos ecosistemas completos de seguridad donde cada cámara, sensor y acceso trabaja sincronizado en tiempo real.
+                Diseñamos, instalamos y mantenemos ecosistemas completos de seguridad donde cada
+                cámara, sensor y acceso trabaja sincronizado en tiempo real.
               </p>
             </div>
             <Link
@@ -80,7 +81,9 @@ export function BentoGridServices() {
                   CCTV Inteligente con Búsqueda Instantánea
                 </h3>
                 <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
-                  Cámaras de alta resolución con analítica de vídeo avanzada: reconocimiento de matrículas (LPR), conteo perimetral y localización de eventos en segundos sin tener que revisar horas de grabación.
+                  Cámaras de alta resolución con analítica de vídeo avanzada: reconocimiento de
+                  matrículas (LPR), conteo perimetral y localización de eventos en segundos sin
+                  tener que revisar horas de grabación.
                 </p>
 
                 <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -128,7 +131,8 @@ export function BentoGridServices() {
                   Alarmas Anti-Inhibición
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
-                  Detección perimetral e interior con doble vía de comunicación redundante (Fibra + 5G). Inmune a cortes de línea e inhibidores de frecuencia.
+                  Detección perimetral e interior con doble vía de comunicación redundante (Fibra +
+                  5G). Inmune a cortes de línea e inhibidores de frecuencia.
                 </p>
 
                 <ul className="mt-5 space-y-2 text-xs text-slate-600">
@@ -176,7 +180,8 @@ export function BentoGridServices() {
                   Control de Accesos & Presencia
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
-                  Gestión integral de quién entra, cuándo y dónde. Lectores biométricos, credenciales móviles cifradas y tornos con registro auditable.
+                  Gestión integral de quién entra, cuándo y dónde. Lectores biométricos,
+                  credenciales móviles cifradas y tornos con registro auditable.
                 </p>
 
                 <ul className="mt-5 space-y-2 text-xs text-slate-600">
@@ -240,7 +245,9 @@ export function BentoGridServices() {
                   Central Receptora & Asistencia Urgente de Averías
                 </h3>
                 <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
-                  Respuesta inmediata ante cualquier salto de alarma. Verificamos la incidencia por vídeo en menos de 15 segundos y activamos el protocolo con Fuerzas de Seguridad y servicio técnico de guardia 24 horas.
+                  Respuesta inmediata ante cualquier salto de alarma. Verificamos la incidencia por
+                  vídeo en menos de 15 segundos y activamos el protocolo con Fuerzas de Seguridad y
+                  servicio técnico de guardia 24 horas.
                 </p>
 
                 <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -288,7 +295,8 @@ export function BentoGridServices() {
                   Protección Contra Incendios (PCI)
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
-                  Detección precoz óptica y térmica, pulsadores, sirenas y extinción. Instalación y mantenimiento conforme al RIPCI y normativa vigente.
+                  Detección precoz óptica y térmica, pulsadores, sirenas y extinción. Instalación y
+                  mantenimiento conforme al RIPCI y normativa vigente.
                 </p>
 
                 <ul className="mt-5 space-y-2 text-xs text-slate-600">
@@ -336,7 +344,8 @@ export function BentoGridServices() {
                   Ingeniería & Obra Nueva
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
-                  Proyectos técnicos desde el plano, coordinación con instaladores y legalización completa para licencias de actividad y primera ocupación.
+                  Proyectos técnicos desde el plano, coordinación con instaladores y legalización
+                  completa para licencias de actividad y primera ocupación.
                 </p>
 
                 <ul className="mt-5 space-y-2 text-xs text-slate-600">

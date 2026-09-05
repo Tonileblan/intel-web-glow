@@ -62,8 +62,7 @@ export const Route = createFileRoute("/")({
           email: site.email,
           address: {
             "@type": "PostalAddress",
-            streetAddress:
-              "Pol. Ind. La Polvorista, C/ Caravaca de la Cruz 13, Nave C-7",
+            streetAddress: "Pol. Ind. La Polvorista, C/ Caravaca de la Cruz 13, Nave C-7",
             postalCode: "30500",
             addressLocality: "Molina de Segura",
             addressRegion: "Murcia",
@@ -123,12 +122,14 @@ function Index() {
 
             {/* Main Headline */}
             <h1 className="mt-6 max-w-4xl text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl md:leading-[1.12]">
-              Sistemas de seguridad avanzada, <span className="text-primary">CCTV con IA</span> y protección integral
+              Sistemas de seguridad avanzada, <span className="text-primary">CCTV con IA</span> y
+              protección integral
             </h1>
 
             {/* Subtitle */}
             <p className="mt-6 max-w-2xl text-base text-slate-600 sm:text-lg">
-              Ingeniería e instalación de alarmas de Grado 2 y 3, videovigilancia de alta precisión y control de accesos para empresas, instituciones y hogares en Murcia y Levante.
+              Ingeniería e instalación de alarmas de Grado 2 y 3, videovigilancia de alta precisión
+              y control de accesos para empresas, instituciones y hogares en Murcia y Levante.
             </p>
 
             {/* Primary Action Buttons */}
@@ -160,7 +161,8 @@ function Index() {
 
               <div className="rounded-xl border border-slate-200/80 bg-white/90 p-4 text-center shadow-2xs backdrop-blur-xs">
                 <dt className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-                  <Counter value={99} prefix="" />.9%
+                  <Counter value={99} prefix="" />
+                  .9%
                 </dt>
                 <dd className="mt-1 text-xs font-medium text-slate-500">Disponibilidad de red</dd>
               </div>
@@ -200,7 +202,10 @@ function Index() {
       <DefenseArchitecture />
 
       {/* Why Control 61 Section */}
-      <section className="border-b border-slate-200/80 bg-white px-4 py-20 sm:px-6 md:py-28" aria-labelledby="porque">
+      <section
+        className="border-b border-slate-200/80 bg-white px-4 py-20 sm:px-6 md:py-28"
+        aria-labelledby="porque"
+      >
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-5">
             <Reveal>
@@ -208,11 +213,16 @@ function Index() {
                 <ShieldCheck className="size-3.5 text-primary" />
                 VALOR DIFERENCIAL
               </p>
-              <h2 id="porque" className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <h2
+                id="porque"
+                className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+              >
                 Por qué las empresas eligen {site.brand}
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-600">
-                Nacimos con amplia experiencia técnica y operativa en el sector de la seguridad privada. Nuestro trabajo es implementar sistemas fiables que funcionen sin fallos para que dejes de preocuparte por la seguridad de tus instalaciones.
+                Nacimos con amplia experiencia técnica y operativa en el sector de la seguridad
+                privada. Nuestro trabajo es implementar sistemas fiables que funcionen sin fallos
+                para que dejes de preocuparte por la seguridad de tus instalaciones.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -253,12 +263,8 @@ function Index() {
                         <div className="inline-flex size-10 items-center justify-center rounded-lg bg-white shadow-2xs ring-1 ring-slate-200">
                           <Icon className="size-5 text-primary" />
                         </div>
-                        <h3 className="mt-4 text-base font-bold text-slate-900">
-                          {reason.title}
-                        </h3>
-                        <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                          {reason.text}
-                        </p>
+                        <h3 className="mt-4 text-base font-bold text-slate-900">{reason.title}</h3>
+                        <p className="mt-2 text-xs leading-relaxed text-slate-600">{reason.text}</p>
                       </div>
                     </div>
                   </Reveal>

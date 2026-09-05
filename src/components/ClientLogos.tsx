@@ -1,7 +1,4 @@
-const modules = import.meta.glob<{ default: string }>(
-  "../assets/clientes/*.png",
-  { eager: true },
-);
+const modules = import.meta.glob<{ default: string }>("../assets/clientes/*.png", { eager: true });
 
 const logos = Object.entries(modules)
   .sort(([a], [b]) => a.localeCompare(b))
@@ -49,18 +46,22 @@ export function ClientLogos({
   text?: string;
 }) {
   return (
-    <section className="border-b border-slate-200/80 bg-slate-50/50 py-16" aria-labelledby="clients-heading">
+    <section
+      className="border-b border-slate-200/80 bg-slate-50/50 py-16"
+      aria-labelledby="clients-heading"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col items-center text-center">
           <p className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-500">
             PROTECCIÓN CORPORATIVA COMPROBADA
           </p>
-          <h2 id="clients-heading" className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+          <h2
+            id="clients-heading"
+            className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+          >
             {title}
           </h2>
-          {text ? (
-            <p className="mt-2.5 max-w-2xl text-sm text-slate-600">{text}</p>
-          ) : null}
+          {text ? <p className="mt-2.5 max-w-2xl text-sm text-slate-600">{text}</p> : null}
         </div>
       </div>
 

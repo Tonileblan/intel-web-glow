@@ -41,10 +41,34 @@ const cameras = [
 ];
 
 const accessLogs = [
-  { time: "14:32:10", user: "G. Martínez (Operaciones)", method: "RFID Cifrado DESFire", zone: "Torno Acceso Norte", state: "Autorizado" },
-  { time: "14:30:45", user: "M. Torres (Dirección Técnica)", method: "Biometría Facial IA", zone: "Puerta CPD Principal", state: "Autorizado" },
-  { time: "14:28:12", user: "Vehículo Matrícula 4821-LMR", method: "LPR Lectura Automática", zone: "Barrera Muelle Carga", state: "Autorizado" },
-  { time: "14:25:01", user: "Prueba Protocolo Anti-Sabotaje", method: "Test Redundancia CRA", zone: "Línea 4G/Fibra", state: "Verificado" },
+  {
+    time: "14:32:10",
+    user: "G. Martínez (Operaciones)",
+    method: "RFID Cifrado DESFire",
+    zone: "Torno Acceso Norte",
+    state: "Autorizado",
+  },
+  {
+    time: "14:30:45",
+    user: "M. Torres (Dirección Técnica)",
+    method: "Biometría Facial IA",
+    zone: "Puerta CPD Principal",
+    state: "Autorizado",
+  },
+  {
+    time: "14:28:12",
+    user: "Vehículo Matrícula 4821-LMR",
+    method: "LPR Lectura Automática",
+    zone: "Barrera Muelle Carga",
+    state: "Autorizado",
+  },
+  {
+    time: "14:25:01",
+    user: "Prueba Protocolo Anti-Sabotaje",
+    method: "Test Redundancia CRA",
+    zone: "Línea 4G/Fibra",
+    state: "Verificado",
+  },
 ];
 
 export function SecurityConsoleHUD() {
@@ -56,7 +80,7 @@ export function SecurityConsoleHUD() {
     const update = () => {
       const d = new Date();
       setCurrentTime(
-        `${d.toLocaleTimeString("es-ES", { hour12: false })}.${Math.floor(d.getMilliseconds() / 100)}`
+        `${d.toLocaleTimeString("es-ES", { hour12: false })}.${Math.floor(d.getMilliseconds() / 100)}`,
       );
     };
     update();
@@ -229,7 +253,8 @@ export function SecurityConsoleHUD() {
                   Almacenamiento Conforme a RGPD
                 </p>
                 <p className="mt-1 text-[11px] text-slate-500">
-                  Grabación continua cifrada en NVR local + copia redundante en nube de alta seguridad.
+                  Grabación continua cifrada en NVR local + copia redundante en nube de alta
+                  seguridad.
                 </p>
               </div>
             </div>
@@ -248,7 +273,9 @@ export function SecurityConsoleHUD() {
               <div className="mt-4 font-mono text-xs text-emerald-400">
                 ● BARRIDO PERIMETRAL: ACTIVO (360°)
               </div>
-              <p className="mt-1 text-xs text-slate-400">12 detectores perimetrales sincronizados</p>
+              <p className="mt-1 text-xs text-slate-400">
+                12 detectores perimetrales sincronizados
+              </p>
             </div>
 
             <div className="flex flex-col justify-between space-y-3 rounded-xl border border-slate-800 bg-slate-900/60 p-5">
@@ -296,9 +323,7 @@ export function SecurityConsoleHUD() {
                   REGISTRO DE ACCESOS EN TIEMPO REAL
                 </h4>
               </div>
-              <span className="font-mono text-[11px] text-emerald-400">
-                14 PUERTAS AUDITADAS
-              </span>
+              <span className="font-mono text-[11px] text-emerald-400">14 PUERTAS AUDITADAS</span>
             </div>
 
             <div className="mt-3 space-y-2 font-mono text-xs">

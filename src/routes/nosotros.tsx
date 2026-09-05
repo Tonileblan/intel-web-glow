@@ -98,14 +98,20 @@ function NosotrosPage() {
       />
 
       {/* Stats Counter Bar */}
-      <section className="border-b border-slate-200/80 bg-white px-4 py-16 sm:px-6" aria-labelledby="cifras">
+      <section
+        className="border-b border-slate-200/80 bg-white px-4 py-16 sm:px-6"
+        aria-labelledby="cifras"
+      >
         <div className="mx-auto max-w-6xl">
           <h2 id="cifras" className="sr-only">
             Cifras de Control 61
           </h2>
           <dl className="grid gap-6 sm:grid-cols-3">
             {site.stats.map((stat) => (
-              <div key={stat.label} className="rounded-xl border border-slate-200 bg-slate-50/60 p-6 text-center shadow-2xs">
+              <div
+                key={stat.label}
+                className="rounded-xl border border-slate-200 bg-slate-50/60 p-6 text-center shadow-2xs"
+              >
                 <dt className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
                   <Counter value={stat.value} prefix={stat.prefix} />
                 </dt>
@@ -117,7 +123,10 @@ function NosotrosPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="border-b border-slate-200/80 bg-slate-50/50 px-4 py-20 sm:px-6 md:py-24" aria-labelledby="mision-vision">
+      <section
+        className="border-b border-slate-200/80 bg-slate-50/50 px-4 py-20 sm:px-6 md:py-24"
+        aria-labelledby="mision-vision"
+      >
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <div className="max-w-2xl">
@@ -125,7 +134,10 @@ function NosotrosPage() {
                 <Sparkles className="size-3.5 text-primary" />
                 PROPÓSITO CORPORATIVO
               </p>
-              <h2 id="mision-vision" className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <h2
+                id="mision-vision"
+                className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+              >
                 Nuestra razón de ser
               </h2>
             </div>
@@ -159,12 +171,16 @@ function NosotrosPage() {
                 <ShieldCheck className="size-3.5 text-primary" />
                 PRINCIPIOS FUNDACIONALES
               </p>
-              <h2 id="valores" className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <h2
+                id="valores"
+                className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+              >
                 Los principios que guían cada instalación
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                No vendemos paquetes cerrados ni contratos opacos: construimos relaciones de confianza a largo plazo
-                basadas en el rigor técnico, la transparencia y el servicio constante.
+                No vendemos paquetes cerrados ni contratos opacos: construimos relaciones de
+                confianza a largo plazo basadas en el rigor técnico, la transparencia y el servicio
+                constante.
               </p>
             </div>
           </Reveal>
@@ -176,9 +192,7 @@ function NosotrosPage() {
                     <value.icon className="size-5" aria-hidden="true" />
                   </div>
                   <h3 className="mt-5 text-lg font-bold text-slate-900">{value.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                    {value.text}
-                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{value.text}</p>
                 </li>
               </Reveal>
             ))}
@@ -187,7 +201,10 @@ function NosotrosPage() {
       </section>
 
       {/* Commitments & Certifications */}
-      <section className="border-t border-slate-200/80 bg-slate-50/70 px-4 py-16 sm:px-6" aria-labelledby="compromiso">
+      <section
+        className="border-t border-slate-200/80 bg-slate-50/70 px-4 py-16 sm:px-6"
+        aria-labelledby="compromiso"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <Reveal>
@@ -195,13 +212,17 @@ function NosotrosPage() {
                 <p className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-500">
                   RIGOR Y EXPERIENCIA
                 </p>
-                <h2 id="compromiso" className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                <h2
+                  id="compromiso"
+                  className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+                >
                   Seguridad técnica con vocación de servicio
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-slate-600">
-                  Entendemos la seguridad como la base para vivir y trabajar con serenidad.
-                  Por eso, cada uno de nuestros proyectos se ejecuta con la máxima exigencia técnica y normativa,
-                  respaldado por certificaciones oficiales y un soporte humano incondicional.
+                  Entendemos la seguridad como la base para vivir y trabajar con serenidad. Por eso,
+                  cada uno de nuestros proyectos se ejecuta con la máxima exigencia técnica y
+                  normativa, respaldado por certificaciones oficiales y un soporte humano
+                  incondicional.
                 </p>
               </div>
             </Reveal>
@@ -211,7 +232,10 @@ function NosotrosPage() {
                 <ul className="mt-5 space-y-3.5">
                   {commitments.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-slate-700">
-                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+                      <CheckCircle2
+                        className="mt-0.5 size-4 shrink-0 text-primary"
+                        aria-hidden="true"
+                      />
                       <span className="font-medium">{item}</span>
                     </li>
                   ))}

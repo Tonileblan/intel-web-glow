@@ -60,7 +60,11 @@ function CctvPage() {
         image="/hero-control-room.jpg"
         imageAlt="Centro de control con múltiples monitores de videovigilancia"
       />
-      <FeatureGrid id="cctv-servicios" heading="Qué incluye una instalación bien hecha" items={items} />
+      <FeatureGrid
+        id="cctv-servicios"
+        heading="Qué incluye una instalación bien hecha"
+        items={items}
+      />
       <CtaSection
         title="Revisamos gratis tu instalación actual"
         text="Si ya tienes cámaras, comprobamos cobertura, calidad de imagen, retención y cumplimiento legal."

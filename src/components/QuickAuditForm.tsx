@@ -45,7 +45,8 @@ export function QuickAuditForm() {
               Diseñamos la protección exacta que necesitas
             </h3>
             <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
-              Analizamos los puntos vulnerables sobre el terreno y te entregamos un presupuesto cerrado sin letra pequeña ni contratos abusivos.
+              Analizamos los puntos vulnerables sobre el terreno y te entregamos un presupuesto
+              cerrado sin letra pequeña ni contratos abusivos.
             </p>
 
             <div className="mt-6 space-y-3">
@@ -87,7 +88,8 @@ export function QuickAuditForm() {
                 ¡Gracias por contactar con Control 61!
               </h4>
               <p className="mt-2 max-w-md text-sm text-slate-600">
-                Hemos registrado tu solicitud. Nos pondremos en contacto contigo en breve para coordinar la visita técnica gratuita.
+                Hemos registrado tu solicitud. Nos pondremos en contacto contigo en breve para
+                coordinar la visita técnica gratuita.
               </p>
               <button
                 type="button"
@@ -162,7 +164,10 @@ export function QuickAuditForm() {
                 </div>
 
                 <div>
-                  <label htmlFor="audit-location" className="block text-xs font-medium text-slate-700">
+                  <label
+                    htmlFor="audit-location"
+                    className="block text-xs font-medium text-slate-700"
+                  >
                     Municipio / Ubicación en Murcia
                   </label>
                   <input

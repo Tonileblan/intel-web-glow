@@ -37,7 +37,9 @@ export function Header() {
             <span className="hidden sm:inline">Murcia & Levante</span>
           </div>
           <div className="flex items-center gap-4">
-            <span className="hidden text-slate-500 md:inline">Instalador Homologado REA & RINA ISO</span>
+            <span className="hidden text-slate-500 md:inline">
+              Instalador Homologado REA & RINA ISO
+            </span>
             <a
               href={site.phoneHref}
               className="flex items-center gap-1.5 font-semibold text-slate-900 transition-colors hover:text-primary"

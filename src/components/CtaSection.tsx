@@ -15,7 +15,10 @@ export function CtaSection({
   showForm?: boolean;
 }) {
   return (
-    <section className="relative overflow-hidden border-t border-slate-200/80 bg-slate-50/60 px-4 py-20 sm:px-6 md:py-28" aria-labelledby="cta-heading">
+    <section
+      className="relative overflow-hidden border-t border-slate-200/80 bg-slate-50/60 px-4 py-20 sm:px-6 md:py-28"
+      aria-labelledby="cta-heading"
+    >
       {/* Background Decorative Gradient */}
       <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-96 w-[700px] -translate-x-1/2 rounded-full bg-red-100/40 blur-3xl" />
 
@@ -26,12 +29,13 @@ export function CtaSection({
               <Sparkles className="size-3.5" />
               PRIMER PASO HACIA TU TRANQUILIDAD
             </p>
-            <h2 id="cta-heading" className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <h2
+              id="cta-heading"
+              className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+            >
               {title}
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-base text-slate-600">
-              {text}
-            </p>
+            <p className="mx-auto mt-3 max-w-2xl text-base text-slate-600">{text}</p>
           </div>
         </Reveal>
 

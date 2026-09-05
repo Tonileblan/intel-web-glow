@@ -61,7 +61,11 @@ function HogarPage() {
         image="/servicio-hogar.jpg"
         imageAlt="Salón de una vivienda al atardecer con teclado de alarma integrado"
       />
-      <FeatureGrid id="hogar-servicios" heading="Soluciones para particulares y comunidades" items={items} />
+      <FeatureGrid
+        id="hogar-servicios"
+        heading="Soluciones para particulares y comunidades"
+        items={items}
+      />
       <section className="border-y border-border px-6 py-20" aria-labelledby="urbanizaciones">
         <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
           <Reveal>
@@ -79,9 +83,9 @@ function HogarPage() {
               Urbanizaciones sin sorpresas en la junta
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Preparamos propuestas comprensibles para presentar a los vecinos, con el
-              alcance, el coste de mantenimiento y las obligaciones legales de la
-              videovigilancia explicadas en lenguaje claro.
+              Preparamos propuestas comprensibles para presentar a los vecinos, con el alcance, el
+              coste de mantenimiento y las obligaciones legales de la videovigilancia explicadas en
+              lenguaje claro.
             </p>
             <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
               <li>· Cartelería y registro de tratamiento conforme al RGPD.</li>

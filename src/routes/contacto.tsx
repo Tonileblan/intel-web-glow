@@ -46,7 +46,10 @@ function ContactoPage() {
       <section className="px-4 py-16 sm:px-6 md:py-24" aria-labelledby="formulario">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 id="formulario" className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <h2
+              id="formulario"
+              className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+            >
               Solicitud de Estudio Gratuito
             </h2>
             <p className="mt-3 text-base text-slate-600">
