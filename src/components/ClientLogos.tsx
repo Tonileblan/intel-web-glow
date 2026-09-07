@@ -21,7 +21,7 @@ function Row({ ariaHidden }: { ariaHidden?: boolean }) {
       {logos.map((logo) => (
         <li
           key={logo.src}
-          className="group flex h-20 w-36 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white px-4 shadow-2xs transition-all duration-300 hover:border-slate-300 hover:shadow-sm"
+          className="group flex h-20 w-36 shrink-0 items-center justify-center rounded-xl border border-slate-800 bg-white/95 p-3 shadow-md transition-all duration-300 hover:border-red-500/50 hover:bg-white hover:shadow-lg hover:scale-105"
         >
           <img
             src={logo.src}
@@ -30,7 +30,7 @@ function Row({ ariaHidden }: { ariaHidden?: boolean }) {
             decoding="async"
             width={300}
             height={188}
-            className="max-h-12 w-auto max-w-full object-contain grayscale opacity-75 transition duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+            className="max-h-12 w-auto max-w-full object-contain grayscale opacity-80 transition duration-300 group-hover:grayscale-0 group-hover:opacity-100"
           />
         </li>
       ))}
@@ -47,21 +47,21 @@ export function ClientLogos({
 }) {
   return (
     <section
-      className="border-b border-slate-200/80 bg-slate-50/50 py-16"
+      className="border-b border-slate-800/80 bg-slate-950/60 py-16"
       aria-labelledby="clients-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col items-center text-center">
-          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-500">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wider text-red-500">
             PROTECCIÓN CORPORATIVA COMPROBADA
           </p>
           <h2
             id="clients-heading"
-            className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+            className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl"
           >
             {title}
           </h2>
-          {text ? <p className="mt-2.5 max-w-2xl text-sm text-slate-600">{text}</p> : null}
+          {text ? <p className="mt-2.5 max-w-2xl text-sm text-slate-300">{text}</p> : null}
         </div>
       </div>
 

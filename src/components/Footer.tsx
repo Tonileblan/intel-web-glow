@@ -8,12 +8,12 @@ import { site } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-900 text-slate-300">
+    <footer className="border-t border-slate-800 bg-slate-950 text-slate-300">
       {/* Top Banner */}
-      <div className="border-b border-slate-800 bg-slate-950 px-4 py-8 sm:px-6">
+      <div className="border-b border-slate-800/80 bg-slate-900/60 px-4 py-8 sm:px-6">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
           <div className="flex items-center gap-3">
-            <div className="flex size-10 items-center justify-center rounded-lg bg-red-500/10 text-primary">
+            <div className="flex size-10 items-center justify-center rounded-lg bg-red-950/60 text-red-500 ring-1 ring-red-900/40">
               <ShieldCheck className="size-5" />
             </div>
             <div>
@@ -25,7 +25,7 @@ export function Footer() {
           </div>
           <a
             href={site.phoneHref}
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-xs transition-colors hover:bg-red-700"
+            className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:bg-red-600 hover:shadow-red-600/30"
           >
             <Phone className="size-4" />
             <span>{site.phone}</span>
@@ -36,14 +36,16 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-12">
         {/* Brand & Mission */}
         <div className="lg:col-span-5">
-          <img
-            src={logo}
-            alt={site.brand}
-            width={1242}
-            height={496}
-            loading="lazy"
-            className="h-9 w-auto brightness-0 invert"
-          />
+          <div className="inline-block rounded-lg bg-white/95 p-1.5">
+            <img
+              src={logo}
+              alt={site.brand}
+              width={1242}
+              height={496}
+              loading="lazy"
+              className="h-8 w-auto"
+            />
+          </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
             {site.legalName}. Más de dos décadas desarrollando ingeniería de seguridad avanzada,
             CCTV con IA, control de accesos y alarmas conectadas a CRA en la Región de Murcia.
@@ -56,7 +58,7 @@ export function Footer() {
               width={1200}
               height={628}
               loading="lazy"
-              className="h-12 w-auto rounded border border-slate-800 bg-white p-1"
+              className="h-12 w-auto rounded border border-slate-700 bg-white/95 p-1"
             />
             <img
               src={selloRea}
@@ -64,7 +66,7 @@ export function Footer() {
               width={1080}
               height={680}
               loading="lazy"
-              className="h-12 w-auto rounded border border-slate-800 bg-white p-1"
+              className="h-12 w-auto rounded border border-slate-700 bg-white/95 p-1"
             />
           </div>
 
@@ -104,7 +106,7 @@ export function Footer() {
           </h4>
           <ul className="mt-4 space-y-3 text-sm text-slate-400">
             <li className="flex items-start gap-3">
-              <Phone className="mt-0.5 size-4 text-primary shrink-0" />
+              <Phone className="mt-0.5 size-4 text-red-500 shrink-0" />
               <div>
                 <a href={site.phoneHref} className="font-medium text-slate-200 hover:text-white">
                   {site.phone}
@@ -115,7 +117,7 @@ export function Footer() {
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <Mail className="mt-0.5 size-4 text-primary shrink-0" />
+              <Mail className="mt-0.5 size-4 text-red-500 shrink-0" />
               <div>
                 <a href={`mailto:${site.email}`} className="text-slate-200 hover:text-white">
                   {site.email}
@@ -124,11 +126,11 @@ export function Footer() {
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 size-4 text-primary shrink-0" />
+              <MapPin className="mt-0.5 size-4 text-red-500 shrink-0" />
               <span className="text-xs leading-relaxed text-slate-400">{site.address}</span>
             </li>
             <li className="flex items-start gap-3">
-              <Clock className="mt-0.5 size-4 text-primary shrink-0" />
+              <Clock className="mt-0.5 size-4 text-red-500 shrink-0" />
               <span className="text-xs text-slate-400">{site.schedule}</span>
             </li>
           </ul>
@@ -136,7 +138,7 @@ export function Footer() {
       </div>
 
       {/* Bottom Legal bar */}
-      <div className="border-t border-slate-800 bg-slate-950 px-4 py-6 sm:px-6">
+      <div className="border-t border-slate-800 bg-black/40 px-4 py-6 sm:px-6">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-xs text-slate-500 sm:flex-row">
           <p>
             © {new Date().getFullYear()} {site.legalName} — Todos los derechos reservados.

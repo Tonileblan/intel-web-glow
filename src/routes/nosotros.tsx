@@ -99,7 +99,7 @@ function NosotrosPage() {
 
       {/* Stats Counter Bar */}
       <section
-        className="border-b border-slate-200/80 bg-white px-4 py-16 sm:px-6"
+        className="border-b border-slate-800/80 bg-slate-950 px-4 py-16 sm:px-6"
         aria-labelledby="cifras"
       >
         <div className="mx-auto max-w-6xl">
@@ -110,12 +110,12 @@ function NosotrosPage() {
             {site.stats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-xl border border-slate-200 bg-slate-50/60 p-6 text-center shadow-2xs"
+                className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 text-center shadow-lg backdrop-blur-md"
               >
-                <dt className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+                <dt className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
                   <Counter value={stat.value} prefix={stat.prefix} />
                 </dt>
-                <dd className="mt-2 text-sm font-medium text-slate-600">{stat.label}</dd>
+                <dd className="mt-2 text-sm font-medium text-slate-400">{stat.label}</dd>
               </div>
             ))}
           </dl>
@@ -124,19 +124,19 @@ function NosotrosPage() {
 
       {/* Mission & Vision */}
       <section
-        className="border-b border-slate-200/80 bg-slate-50/50 px-4 py-20 sm:px-6 md:py-24"
+        className="border-b border-slate-800/80 bg-slate-950/60 px-4 py-20 sm:px-6 md:py-24"
         aria-labelledby="mision-vision"
       >
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <div className="max-w-2xl">
-              <p className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 font-mono text-xs font-semibold uppercase text-slate-700">
-                <Sparkles className="size-3.5 text-primary" />
+              <p className="inline-flex items-center gap-1.5 rounded-full border border-red-500/30 bg-red-950/40 px-3.5 py-1 font-mono text-xs font-semibold uppercase text-red-400">
+                <Sparkles className="size-3.5" />
                 PROPÓSITO CORPORATIVO
               </p>
               <h2
                 id="mision-vision"
-                className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+                className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"
               >
                 Nuestra razón de ser
               </h2>
@@ -145,13 +145,13 @@ function NosotrosPage() {
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             {pillars.map((pillar, i) => (
               <Reveal key={pillar.title} delay={i * 0.1}>
-                <div className="relative flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-white p-8 shadow-xs transition-all hover:border-slate-300 hover:shadow-md">
+                <div className="relative flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/80 p-8 shadow-xl backdrop-blur-md transition-all hover:border-red-500/40 hover:bg-slate-900">
                   <div>
-                    <div className="inline-flex size-12 items-center justify-center rounded-xl bg-red-50 text-primary ring-1 ring-red-100">
+                    <div className="inline-flex size-12 items-center justify-center rounded-xl bg-red-950/60 text-red-500 ring-1 ring-red-900/50">
                       <pillar.icon className="size-6" aria-hidden="true" />
                     </div>
-                    <h3 className="mt-6 text-2xl font-bold text-slate-900">{pillar.title}</h3>
-                    <p className="mt-3 text-base leading-relaxed text-slate-600">
+                    <h3 className="mt-6 text-2xl font-bold text-white">{pillar.title}</h3>
+                    <p className="mt-3 text-base leading-relaxed text-slate-300">
                       {pillar.description}
                     </p>
                   </div>
@@ -167,17 +167,17 @@ function NosotrosPage() {
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <div className="max-w-2xl">
-              <p className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 font-mono text-xs font-semibold uppercase text-slate-700">
-                <ShieldCheck className="size-3.5 text-primary" />
+              <p className="inline-flex items-center gap-1.5 rounded-full border border-slate-800 bg-slate-900 px-3.5 py-1 font-mono text-xs font-semibold uppercase text-slate-300">
+                <ShieldCheck className="size-3.5 text-red-500" />
                 PRINCIPIOS FUNDACIONALES
               </p>
               <h2
                 id="valores"
-                className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+                className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"
               >
                 Los principios que guían cada instalación
               </h2>
-              <p className="mt-4 text-base text-slate-600">
+              <p className="mt-4 text-base text-slate-300">
                 No vendemos paquetes cerrados ni contratos opacos: construimos relaciones de
                 confianza a largo plazo basadas en el rigor técnico, la transparencia y el servicio
                 constante.
@@ -187,12 +187,12 @@ function NosotrosPage() {
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, i) => (
               <Reveal key={value.title} delay={i * 0.05}>
-                <li className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-xs transition-all duration-300 hover:border-slate-300 hover:shadow-md">
-                  <div className="inline-flex size-11 items-center justify-center rounded-xl bg-slate-50 text-primary ring-1 ring-slate-200">
+                <li className="flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-lg backdrop-blur-md transition-all duration-300 hover:border-red-500/40 hover:bg-slate-900">
+                  <div className="inline-flex size-11 items-center justify-center rounded-xl bg-slate-800 text-red-500 ring-1 ring-slate-700">
                     <value.icon className="size-5" aria-hidden="true" />
                   </div>
-                  <h3 className="mt-5 text-lg font-bold text-slate-900">{value.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{value.text}</p>
+                  <h3 className="mt-5 text-lg font-bold text-white">{value.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-300">{value.text}</p>
                 </li>
               </Reveal>
             ))}
@@ -202,23 +202,23 @@ function NosotrosPage() {
 
       {/* Commitments & Certifications */}
       <section
-        className="border-t border-slate-200/80 bg-slate-50/70 px-4 py-16 sm:px-6"
+        className="border-t border-slate-800/80 bg-slate-950/80 px-4 py-16 sm:px-6"
         aria-labelledby="compromiso"
       >
         <div className="mx-auto max-w-6xl">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <Reveal>
               <div>
-                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-500">
+                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-red-500">
                   RIGOR Y EXPERIENCIA
                 </p>
                 <h2
                   id="compromiso"
-                  className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+                  className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
                 >
                   Seguridad técnica con vocación de servicio
                 </h2>
-                <p className="mt-4 text-base leading-relaxed text-slate-600">
+                <p className="mt-4 text-base leading-relaxed text-slate-300">
                   Entendemos la seguridad como la base para vivir y trabajar con serenidad. Por eso,
                   cada uno de nuestros proyectos se ejecuta con la máxima exigencia técnica y
                   normativa, respaldado por certificaciones oficiales y un soporte humano
@@ -227,13 +227,13 @@ function NosotrosPage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="rounded-2xl border border-slate-200 bg-white p-7 shadow-xs">
-                <h3 className="text-lg font-bold text-slate-900">Lo que garantizamos siempre:</h3>
+              <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-7 shadow-xl backdrop-blur-md">
+                <h3 className="text-lg font-bold text-white">Lo que garantizamos siempre:</h3>
                 <ul className="mt-5 space-y-3.5">
                   {commitments.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-slate-700">
+                    <li key={item} className="flex items-start gap-3 text-sm text-slate-200">
                       <CheckCircle2
-                        className="mt-0.5 size-4 shrink-0 text-primary"
+                        className="mt-0.5 size-4 shrink-0 text-red-500"
                         aria-hidden="true"
                       />
                       <span className="font-medium">{item}</span>

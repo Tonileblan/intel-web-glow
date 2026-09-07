@@ -79,23 +79,23 @@ export function DefenseArchitecture() {
 
   return (
     <section
-      className="border-y border-slate-200/80 bg-slate-50/70 px-4 py-20 sm:px-6 md:py-28"
+      className="border-y border-slate-800/80 bg-slate-950/80 px-4 py-20 sm:px-6 md:py-28"
       aria-labelledby="defense-flow"
     >
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <div className="text-center">
-            <p className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 font-mono text-xs font-semibold text-slate-700 shadow-2xs">
-              <Radio className="size-3 text-primary animate-pulse" />
+            <p className="inline-flex items-center gap-1.5 rounded-full border border-slate-800 bg-slate-900 px-3.5 py-1 font-mono text-xs font-semibold text-slate-300 shadow-md">
+              <Radio className="size-3 text-red-500 animate-pulse" />
               PROTOCOLO DE RESPUESTA INTEGRADA
             </p>
             <h2
               id="defense-flow"
-              className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+              className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"
             >
               Cómo funciona el escudo defensivo de Control 61
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-base text-slate-600">
+            <p className="mx-auto mt-3 max-w-2xl text-base text-slate-300">
               Un proceso milimétricamente estructurado que combina hardware homologado, inteligencia
               artificial y respuesta humana experta en segundos.
             </p>
@@ -113,27 +113,27 @@ export function DefenseArchitecture() {
                 onClick={() => setActiveStep(idx)}
                 className={`relative flex flex-col items-start rounded-xl border p-4 text-left transition-all duration-200 ${
                   isActive
-                    ? "border-primary bg-white shadow-sm ring-1 ring-primary/20"
-                    : "border-slate-200 bg-white/60 hover:border-slate-300 hover:bg-white"
+                    ? "border-red-500/80 bg-slate-900 shadow-lg ring-1 ring-red-500/30"
+                    : "border-slate-800 bg-slate-900/50 hover:border-slate-700 hover:bg-slate-900"
                 }`}
               >
                 <div className="flex w-full items-center justify-between">
                   <span
                     className={`font-mono text-xs font-bold ${
-                      isActive ? "text-primary" : "text-slate-400"
+                      isActive ? "text-red-400" : "text-slate-500"
                     }`}
                   >
                     FASE {layer.step}
                   </span>
-                  <Icon className={`size-4 ${isActive ? "text-primary" : "text-slate-400"}`} />
+                  <Icon className={`size-4 ${isActive ? "text-red-500" : "text-slate-500"}`} />
                 </div>
-                <p className="mt-2 text-xs font-semibold text-slate-900 sm:text-sm">{layer.name}</p>
-                <span className="mt-1 flex items-center gap-1 font-mono text-[11px] text-slate-500">
-                  <Clock className="size-3" />
+                <p className="mt-2 text-xs font-semibold text-white sm:text-sm">{layer.name}</p>
+                <span className="mt-1 flex items-center gap-1 font-mono text-[11px] text-slate-400">
+                  <Clock className="size-3 text-emerald-400" />
                   {layer.latency}
                 </span>
                 {isActive ? (
-                  <div className="absolute -bottom-[9px] left-1/2 -translate-x-1/2 rounded-full bg-primary p-1 text-white shadow-xs">
+                  <div className="absolute -bottom-[9px] left-1/2 -translate-x-1/2 rounded-full bg-red-600 p-1 text-white shadow-md">
                     <ChevronRight className="size-2.5 rotate-90" />
                   </div>
                 ) : null}
@@ -143,35 +143,35 @@ export function DefenseArchitecture() {
         </div>
 
         {/* Active Step Showcase Card */}
-        <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
+        <div className="mt-8 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-md sm:p-10">
           <div className="grid items-center gap-8 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 rounded-md border border-red-100 bg-red-50 px-2.5 py-1 text-xs font-semibold text-primary font-mono">
+              <div className="inline-flex items-center gap-2 rounded-md border border-red-500/30 bg-red-950/40 px-2.5 py-1 text-xs font-semibold text-red-400 font-mono">
                 <span>FASE {layers[activeStep].step}</span>
                 <span>·</span>
                 <span>{layers[activeStep].tag}</span>
               </div>
 
-              <h3 className="mt-4 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              <h3 className="mt-4 text-2xl font-bold tracking-tight text-white sm:text-3xl">
                 {layers[activeStep].title}
               </h3>
 
-              <p className="mt-3 text-base leading-relaxed text-slate-600">
+              <p className="mt-3 text-base leading-relaxed text-slate-300">
                 {layers[activeStep].description}
               </p>
 
               <div className="mt-6 space-y-3">
                 {layers[activeStep].points.map((pt, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-0.5 size-4 text-primary shrink-0" />
-                    <span className="text-sm font-medium text-slate-700">{pt}</span>
+                    <CheckCircle2 className="mt-0.5 size-4 text-red-500 shrink-0" />
+                    <span className="text-sm font-medium text-slate-200">{pt}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-xl border border-slate-100 bg-slate-900 p-6 text-slate-100 shadow-md">
+              <div className="rounded-xl border border-slate-800 bg-slate-950 p-6 text-slate-100 shadow-xl">
                 <div className="flex items-center justify-between border-b border-slate-800 pb-3 font-mono text-xs text-slate-400">
                   <span>TELEMETRÍA EN VIVO</span>
                   <span className="text-emerald-400">● 100% OPERATIVO</span>
@@ -198,7 +198,7 @@ export function DefenseArchitecture() {
                   </div>
                 </div>
 
-                <div className="mt-5 rounded-lg bg-slate-800/80 p-3 text-[11px] text-slate-300">
+                <div className="mt-5 rounded-lg border border-slate-800 bg-slate-900/90 p-3 text-[11px] text-slate-300">
                   ⚡ Conexión directa y certificada según Ley 5/2014 de Seguridad Privada.
                 </div>
               </div>
