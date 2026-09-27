@@ -3,7 +3,8 @@
 > **Ubicación Google Drive:** `Google Drive > Mi unidad > 1-Proyectos > Apps-Desarrollo > Control61-Web`  
 > **Slug / Código:** `com_control61`  
 > **Categoría:** Comercial / Clientes  
-> **Estado:** En Desarrollo  
+> **Estado:** En Producción (Vercel)  
+> **URL Producción:** [https://control61.vercel.app](https://control61.vercel.app)  
 > **Base de Datos:** Supabase PostgreSQL (`com_control61`)  
 > **Directrices Maestras Drive:** [Carpeta de Directrices](https://drive.google.com/drive/folders/1lWPlfQ3KtLijHklYE0O993J-HwQInjZW)
 
